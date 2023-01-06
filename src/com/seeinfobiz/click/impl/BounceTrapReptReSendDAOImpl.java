@@ -210,7 +210,7 @@
 /* 210 */     Pxrdxrcpt pxrdxrcpt = null;
 /* 211 */     Object object = null;
 /*     */     try {
-                 System.out.println("ProductId : |"+paramString+"|");
+                 System.out.println("ProductId : ||"+paramString+"||");
 /* 213 */       if (paramObject instanceof Pxbncdxtra) {
 /* 214 */         pxbncdxtra = (Pxbncdxtra)paramObject;
 /* 215 */         Session session = HibernateUtil_Main.getSession();
