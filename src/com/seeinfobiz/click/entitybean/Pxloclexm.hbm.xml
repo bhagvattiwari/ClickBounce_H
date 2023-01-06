@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 27, 2010 11:57:53 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Pxloclexm"   table="PXLOCLEXM">
+    <id name="ixlcl" type="long">
+      <column name="IXLCL" precision="20" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <property name="nmxlcl" type="string">
+      <column length="100" name="NMXLCL"/>
+    </property>
+    <property name="rmxlcl" type="string">
+      <column length="500" name="RMXLCL"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <set inverse="true" name="pxusxlocxlnks">
+      <key>
+        <column name="IXLCL" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxusxlocxlnk"/>
+    </set>
+    <set inverse="true" name="pxeshdlrxprsxms">
+      <key>
+        <column name="IXLCL" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxeshdlrxprsxm"/>
+    </set>
+  </class>
+</hibernate-mapping>

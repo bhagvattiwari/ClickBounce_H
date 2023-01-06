@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 27, 2010 11:57:53 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Pxadxstxm"   table="PXADXSTXM">
+    <id name="ixst" type="long">
+      <column name="IXST" precision="20" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <many-to-one class="com.seeinfobiz.click.entitybean.Pxprdctxm" fetch="select" lazy="false" name="pxprdctxm">
+      <column name="IXPRDT" precision="20" scale="0"/>
+    </many-to-one>
+    <property name="nmxst" type="string">
+      <column length="100" name="NMXST"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <property name="dxst" type="date">
+      <column length="7" name="DXST"/>
+    </property>
+    <property name="dxed" type="date">
+      <column length="7" name="DXED"/>
+    </property>
+    <property name="dscxevt" type="string">
+      <column length="100" name="DSCXEVT"/>
+    </property>
+    <property name="tmpxdsgn" type="string">
+      <column length="500" name="TMPXDSGN"/>
+    </property>
+    <property name="sltsxm" type="java.lang.Byte">
+      <column name="SLTSXM" precision="2" scale="0"/>
+    </property>
+    <property name="dscxst" type="string">
+      <column length="200" name="DSCXST"/>
+    </property>
+    <property name="stts" type="string">
+      <column length="2" name="STTS"/>
+    </property>
+    <property name="rmsxmkrs" type="string">
+      <column length="1000" name="RMSXMKRS"/>
+    </property>
+    <property name="rmsxaprvl" type="string">
+      <column length="1000" name="RMSXAPRVL"/>
+    </property>
+    <property name="rmksxchkrs" type="string">
+      <column length="1000" name="RMKSXCHKRS"/>
+    </property>
+    <property name="flxdflt" type="string">
+      <column length="10" name="FLXDFLT"/>
+    </property>
+    <property name="dsgnxmlloc" type="string">
+      <column length="500" name="DSGNXMLLOC"/>
+    </property>
+    <property name="dsgnxmlxnm" type="string">
+      <column length="500" name="DSGNXMLXNM"/>
+    </property>
+    <property name="ixdpt" type="long">
+      <column name="IXDPT" precision="22" scale="0"/>
+    </property>
+  </class>
+</hibernate-mapping>

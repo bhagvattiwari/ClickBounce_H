@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 27, 2010 11:57:53 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Pxeshdlrxprsxm"   table="PXESHDLRXPRSXM">
+    <id name="ixprcsxeshdlr" type="long">
+      <column name="IXPRCSXESHDLR" precision="20" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <many-to-one class="com.seeinfobiz.click.entitybean.Pxloclexm" fetch="select" name="pxloclexm">
+      <column name="IXLCL" precision="20" scale="0"/>
+    </many-to-one>
+    <many-to-one class="com.seeinfobiz.click.entitybean.Pxprdctxm" fetch="select" name="pxprdctxm">
+      <column name="IXPRDT" precision="20" scale="0"/>
+    </many-to-one>
+    <property name="mdxprcsxe" type="string">
+      <column length="2" name="MDXPRCSXE"/>
+    </property>
+    <property name="flxjbxtrm" type="string">
+      <column length="10" name="FLXJBXTRM"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <property name="sc1xtm" type="date">
+      <column length="7" name="SC1XTM"/>
+    </property>
+    <property name="sc2xtm" type="date">
+      <column length="7" name="SC2XTM"/>
+    </property>
+    <property name="sc3xtm" type="date">
+      <column length="7" name="SC3XTM"/>
+    </property>
+    <property name="sc4xtm" type="date">
+      <column length="7" name="SC4XTM"/>
+    </property>
+    <set inverse="true" name="pxeshdlrxprcsxetls">
+      <key>
+        <column name="IXPRCSXESHDLR" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxeshdlrxprcsxetl"/>
+    </set>
+    <set inverse="true" name="pxeshlrxprcsxmdes">
+      <key>
+        <column name="IXPRCSXESHDLR" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxeshlrxprcsxmde"/>
+    </set>
+    <set inverse="true" name="pxeshlrxprcsxdtlses">
+      <key>
+        <column name="IXPRCSXESHDLR" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxeshlrxprcsxdtls"/>
+    </set>
+  </class>
+</hibernate-mapping>

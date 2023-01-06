@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 27, 2010 11:57:53 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Cxsuprsnxm"   table="CXSUPRSNXM">
+    <id name="ixsuprsn" type="long">
+      <column name="IXSUPRSN" precision="20" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <many-to-one class="com.seeinfobiz.click.entitybean.Pxprdctxm" fetch="select" lazy="false" name="pxprdctxm">
+      <column name="IXPRDT" precision="20" scale="0"/>
+    </many-to-one>
+    <property name="nmxsuprs" type="string">
+      <column length="20" name="NMXSUPRS"/>
+    </property>
+    <property name="lstxupld" type="string">
+      <column length="20" name="LSTXUPLD"/>
+    </property>
+    <property name="nmxclmn" type="string">
+      <column length="100" name="NMXCLMN"/>
+    </property>
+    <property name="crtraxqry" type="string">
+      <column length="2000" name="CRTRAXQRY"/>
+    </property>
+    <property name="flxdflt" type="string">
+      <column length="10" name="FLXDFLT"/>
+    </property>
+    <property name="dxfrm" type="date">
+      <column length="7" name="DXFRM"/>
+    </property>
+    <property name="dxto" type="date">
+      <column length="7" name="DXTO"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <property name="flxsuprn" type="string">
+      <column length="10" name="FLXSUPRN"/>
+    </property>
+    <property name="ixdpt" type="long">
+      <column name="IXDPT" precision="22" scale="0"/>
+    </property>
+  </class>
+</hibernate-mapping>

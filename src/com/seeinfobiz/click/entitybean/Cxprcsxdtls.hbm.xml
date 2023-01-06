@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 25, 2011 10:31:28 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Cxprcsxdtls"   table="CXPRCSXDTLS">
+    <id name="ixdtlsxprcs" type="long">
+      <column name="IXDTLSXPRCS" precision="20" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <many-to-one class="com.seeinfobiz.click.entitybean.Cxprcsxm" fetch="select" name="cxprcsxm">
+      <column name="IXPRCS" precision="20" scale="0"/>
+    </many-to-one>
+    <property name="mdxgen" type="string">
+      <column length="6" name="MDXGEN"/>
+    </property>
+    <property name="fxprcsxgen" type="string">
+      <column length="1" name="FXPRCSXGEN" not-null="true"/>
+    </property>
+    <property name="fxsuprsxgen" type="string">
+      <column length="1" name="FXSUPRSXGEN"/>
+    </property>
+    <property name="flxfrncyxgen" type="string">
+      <column length="1" name="FLXFRNCYXGEN"/>
+    </property>
+    <property name="nmxflxsuprsxgen" type="string">
+      <column length="1000" name="NMXFLXSUPRSXGEN"/>
+    </property>
+    <property name="mdxem" type="string">
+      <column length="6" name="MDXEM"/>
+    </property>
+    <property name="flxprcsxem" type="string">
+      <column length="1" name="FLXPRCSXEM"/>
+    </property>
+    <property name="prtctxwdpsxem" type="string">
+      <column length="1" name="PRTCTXWDPSXEM" not-null="true"/>
+    </property>
+    <property name="flxfrncyxem" type="string">
+      <column length="1" name="FLXFRNCYXEM"/>
+    </property>
+    <property name="flxsuprsxem" type="string">
+      <column length="1" name="FLXSUPRSXEM"/>
+    </property>
+    <property name="nmxflexsuprsxem" type="string">
+      <column length="1000" name="NMXFLEXSUPRSXEM"/>
+    </property>
+    <property name="flxrnxem" type="string">
+      <column length="1" name="FLXRNXEM" not-null="true"/>
+    </property>
+    <property name="dtmexrnxem" type="date">
+      <column length="7" name="DTMEXRNXEM"/>
+    </property>
+    <property name="acntxttl" type="long">
+      <column name="ACNTXTTL" precision="20" scale="0"/>
+    </property>
+    <property name="prsdxacntxttl" type="string">
+      <column length="50" name="PRSDXACNTXTTL"/>
+    </property>
+    <property name="gnrtdxstmtxttl" type="long">
+      <column name="GNRTDXSTMTXTTL" precision="20" scale="0"/>
+    </property>
+    <property name="msdxacntxttl" type="string">
+      <column length="50" name="MSDXACNTXTTL"/>
+    </property>
+    <property name="wbxttl" type="long">
+      <column name="WBXTTL" precision="20" scale="0"/>
+    </property>
+    <property name="prntxttl" type="long">
+      <column name="PRNTXTTL" precision="20" scale="0"/>
+    </property>
+    <property name="emxttl" type="long">
+      <column name="EMXTTL" precision="20" scale="0"/>
+    </property>
+    <property name="smsxttl" type="long">
+      <column name="SMSXTTL" precision="20" scale="0"/>
+    </property>
+    <property name="fxxttl" type="long">
+      <column name="FXXTTL" precision="20" scale="0"/>
+    </property>
+    <property name="msdxwbxttl" type="string">
+      <column length="20" name="MSDXWBXTTL"/>
+    </property>
+    <property name="msdxprntxttl" type="string">
+      <column length="20" name="MSDXPRNTXTTL"/>
+    </property>
+    <property name="msdxemxttl" type="string">
+      <column length="20" name="MSDXEMXTTL"/>
+    </property>
+    <property name="msdxsmsxttl" type="string">
+      <column length="20" name="MSDXSMSXTTL"/>
+    </property>
+    <property name="msdxfxxttl" type="string">
+      <column length="20" name="MSDXFXXTTL"/>
+    </property>
+    <property name="stxprsxtm" type="timestamp">
+      <column length="7" name="STXPRSXTM"/>
+    </property>
+    <property name="edxprsxtm" type="timestamp">
+      <column length="7" name="EDXPRSXTM"/>
+    </property>
+    <property name="stxgenxtm" type="string">
+      <column length="50" name="STXGENXTM"/>
+    </property>
+    <property name="edxgenxtm" type="string">
+      <column length="50" name="EDXGENXTM"/>
+    </property>
+    <property name="stxemlxtm" type="string">
+      <column length="50" name="STXEMLXTM"/>
+    </property>
+    <property name="edxemlxtm" type="string">
+      <column length="50" name="EDXEMLXTM"/>
+    </property>
+    <property name="cntrxgenxtmp" type="long">
+      <column name="CNTRXGENXTMP" precision="20" scale="0"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <property name="msdxgnrxacntxttl" type="long">
+      <column name="MSDXGNRXACNTXTTL" precision="20" scale="0"/>
+    </property>
+    <property name="totxhrdxbncd" type="string">
+      <column name="TOTXHRDXBNCD"/>
+    </property>
+    <property name="totxsftxbncd" type="string">
+      <column name="TOTXSFTXBNCD"/>
+    </property>
+    <property name="rdxemlxttl" type="string">
+      <column name="RDXEMLXTTL"/>
+    </property>
+    <property name="urxemlxttl" type="string">
+      <column name="URXEMLXTTL"/>
+    </property>
+    <property name="dlvxemlxttl" type="string">
+      <column name="DLVXEMLXTTL"/>
+    </property>
+    <property name="udlvxemlxttl" type="string">
+      <column name="UDLVXEMLXTTL"/>
+    </property>
+  </class>
+</hibernate-mapping>

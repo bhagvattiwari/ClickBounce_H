@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 12, 2011 12:20:54 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Cxprefxqry"   table="CXPREFXQRY">
+    <id name="ixd" type="long">
+      <column name="IXD" precision="22" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <property name="crn" type="long">
+      <column name="CRN" precision="22" scale="0"/>
+    </property>
+    <property name="cxqryxid" type="string">
+      <column length="100" name="CXQRYXID"/>
+    </property>
+  </class>
+</hibernate-mapping>

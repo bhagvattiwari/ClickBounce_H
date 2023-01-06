@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 30, 2011 1:10:38 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Pximgxm"   table="PXIMGXM">
+    <id name="iximg" type="long">
+      <column name="IXIMG" precision="20" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <property name="nmximg" type="string">
+      <column length="100" name="NMXIMG"/>
+    </property>
+    <property name="urlximg" type="string">
+      <column length="500" name="URLXIMG"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <property name="extximg" type="string">
+      <column length="20" name="EXTXIMG"/>
+    </property>
+    <property name="ixprd" type="string">
+      <column length="20" name="IXPRD"/>
+    </property>
+    <property name="isxembdximg" type="string">
+      <column length="20" name="ISXEMBDXIMG"/>
+    </property>
+  </class>
+</hibernate-mapping>

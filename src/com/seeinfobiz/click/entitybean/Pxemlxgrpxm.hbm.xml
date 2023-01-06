@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 27, 2010 11:57:53 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class lazy="false" name="com.seeinfobiz.click.entitybean.Pxemlxgrpxm"   table="PXEMLXGRPXM">
+    <id name="ixgrpxem" type="long">
+      <column name="IXGRPXEM" precision="20" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <property name="nmxgrpxem" type="string">
+      <column length="100" name="NMXGRPXEM"/>
+    </property>
+    <property name="frmxval" type="date">
+      <column length="7" name="FRMXVAL"/>
+    </property>
+    <property name="flxdflt" type="string">
+      <column length="10" name="FLXDFLT"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <property name="toxval" type="date">
+      <column length="7" name="TOXVAL"/>
+    </property>
+    <set inverse="true" name="pxemlxgrpxlnks">
+      <key>
+        <column name="IXGRPXEM" not-null="true" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxemlxgrpxlnk"/>
+    </set>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 27, 2010 11:57:53 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Nxaxc"   table="NXAXC">
+    <id name="ixnac" type="big_decimal">
+      <column name="IXNAC" precision="20" scale="0"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="nacxfldx1" type="big_decimal">
+      <column name="NACXFLDX1" precision="22" scale="0"/>
+    </property>
+    <property name="nacxfldx2" type="string">
+      <column length="1000" name="NACXFLDX2"/>
+    </property>
+    <property name="nacxfldx3" type="string">
+      <column length="1000" name="NACXFLDX3"/>
+    </property>
+    <property name="nacxfldx4" type="string">
+      <column length="1000" name="NACXFLDX4"/>
+    </property>
+  </class>
+</hibernate-mapping>

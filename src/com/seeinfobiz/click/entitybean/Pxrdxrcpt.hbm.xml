@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 23, 2013 4:23:50 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.seeinfobiz.click.entitybean.Pxrdxrcpt" table="PXRDXRCPT"  >
+<!--        <id name="ixcnt" type="long">
+            <column name="IXCNT" precision="20" scale="0" />
+            <generator class="increment" />
+        </id>-->
+
+        <id name="ixcnt" type="long">
+            <column name="IXCNT" precision="20" scale="0"/>
+            <generator class="increment"/>
+        </id>
+        <property name="ixem" type="string">
+            <column name="IXEM" length="200" not-null="true" />
+        </property>
+        <property name="exsntxdt" type="string">
+            <column name="EXSNTXDT" length="40" />
+        </property>
+        <property name="exrdxdt" type="string">
+            <column name="EXRDXDT" length="40" />
+        </property>
+        <property name="ixprcs" type="string">
+            <column name="IXPRCS" length="20" />
+        </property>
+        <property name="cxcrdxnum" type="string">
+            <column name="CXCRDXNUM" length="20" />
+        </property>
+        <property name="pxprcxdt" type="date">
+            <column name="PXPRCXDT" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

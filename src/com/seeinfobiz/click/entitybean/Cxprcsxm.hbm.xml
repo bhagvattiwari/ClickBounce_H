@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 25, 2011 10:31:28 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Cxprcsxm"   table="CXPRCSXM">
+    <id name="ixprcs" type="long">
+      <column name="IXPRCS" precision="20" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <many-to-one class="com.seeinfobiz.click.entitybean.Pxprdctxm" fetch="select" name="pxprdctxm">
+      <column name="IXPRDT" precision="20" scale="0"/>
+    </many-to-one>
+    <property name="dxprcs" type="date">
+      <column length="7" name="DXPRCS"/>
+    </property>
+    <property name="nmxprcs" type="string">
+      <column length="50" name="NMXPRCS"/>
+    </property>
+    <property name="ixstmt" type="long">
+      <column name="IXSTMT" precision="20" scale="0"/>
+    </property>
+    <property name="dxstmt" type="date">
+      <column length="7" name="DXSTMT"/>
+    </property>
+    <property name="mdxprs" type="string">
+      <column length="2" name="MDXPRS"/>
+    </property>
+    <property name="fxprcsxprs" type="string">
+      <column length="1" name="FXPRCSXPRS" not-null="true"/>
+    </property>
+    <property name="fxprcsxeml" type="string">
+      <column length="1" name="FXPRCSXEML" not-null="true"/>
+    </property>
+    <property name="fxprcsxgen" type="string">
+      <column length="1" name="FXPRCSXGEN" not-null="true"/>
+    </property>
+    <property name="frmtxotpt" type="string">
+      <column length="50" name="FRMTXOTPT"/>
+    </property>
+    <property name="cdexomrxbr" type="string">
+      <column length="20" name="CDEXOMRXBR"/>
+    </property>
+    <property name="txprcs" type="string">
+      <column length="20" name="TXPRCS"/>
+    </property>
+    <property name="flxfrncyxprs" type="string">
+      <column length="1" name="FLXFRNCYXPRS"/>
+    </property>
+    <property name="stxdt" type="date">
+      <column length="7" name="STXDT"/>
+    </property>
+    <property name="edxdt" type="date">
+      <column length="7" name="EDXDT"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <property name="flgxlgoxw" type="string">
+      <column length="20" name="FLGXLGOXW"/>
+    </property>
+    <property name="flgxlgoxwo" type="string">
+      <column length="20" name="FLGXLGOXWO"/>
+    </property>
+    <property name="flgxlgoxeml" type="string">
+      <column length="20" name="FLGXLGOXEML"/>
+    </property>
+    <property name="ixlcl" type="long">
+      <column name="IXLCL" precision="20" scale="0"/>
+    </property>
+    <property name="ixmxshldr" type="long">
+      <column name="IXMXSHDLR" precision="20" scale="0"/>
+    </property>
+    <set inverse="true" name="cxprcsxdtlses">
+      <key>
+        <column name="IXPRCS" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Cxprcsxdtls"/>
+    </set>
+  </class>
+</hibernate-mapping>

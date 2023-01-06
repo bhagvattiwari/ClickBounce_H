@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 20, 2011 1:57:33 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Pxdeptxm"   table="PXDEPTXM">
+    <id name="ixdpt" type="long">
+      <column name="IXDPT" precision="20" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <property name="nmxdpt" type="string">
+      <column length="100" name="NMXDPT"/>
+    </property>
+    <property name="rmxdpt" type="string">
+      <column length="500" name="RMXDPT"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <set inverse="true" name="pxusrxms">
+      <key>
+        <column name="IXDPT" precision="22" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxusrxm"/>
+    </set>
+  </class>
+</hibernate-mapping>

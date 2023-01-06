@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 22, 2011 11:02:27 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Pxprdctxm"   table="PXPRDCTXM">
+    <id name="ixprdt" type="long">
+      <column name="IXPRDT" precision="20" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <many-to-one cascade="all" class="com.seeinfobiz.click.entitybean.Pxbncdxmlxcng" fetch="select" lazy="false" name="pxbncdxmlxcng">
+      <column name="SRVXBNCD" precision="20" scale="0"/>
+    </many-to-one>
+    <many-to-one cascade="all" class="com.seeinfobiz.click.entitybean.Pxemxsrvxcnfg" fetch="select" lazy="false" name="pxemxsrvxcnfg">
+      <column name="SRVXRLYXSMTP" precision="20" scale="0"/>
+    </many-to-one>
+    <property name="nmxprdt" type="string">
+      <column length="100" name="NMXPRDT"/>
+    </property>
+    <property name="dscxprdt" type="string">
+      <column length="100" name="DSCXPRDT"/>
+    </property>
+    <property name="dr1xfl" type="string">
+      <column length="100" name="DR1XFL"/>
+    </property>
+    <property name="dr2xfl" type="string">
+      <column length="100" name="DR2XFL"/>
+    </property>
+    <property name="dr3xfl" type="string">
+      <column length="100" name="DR3XFL"/>
+    </property>
+    <property name="dr4xfl" type="string">
+      <column length="100" name="DR4XFL"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <property name="isxflgebp" type="string">
+      <column length="20" name="ISXFLGEBP"/>
+    </property>
+    <property name="ixprm" type="big_decimal">
+      <column name="IXPRM" precision="22" scale="0"/>
+    </property>
+    <property name="ixdpt" type="long">
+      <column name="IXDPT" precision="22" scale="0"/>
+    </property>
+    <property name="cdexprdt" type="long">
+      <column name="CDEXPRDT" precision="22" scale="0"/>
+    </property>
+    <property name="pthxexlxprdct" type="string">
+      <column length="1024" name="PTHXEXLXPRDCT"/>
+    </property>
+    <set inverse="true" name="pxeshdlrxprsxms">
+      <key>
+        <column name="IXPRDT" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxeshdlrxprsxm"/>
+    </set>
+    <set inverse="true" name="pxmtxrlxms">
+      <key>
+        <column name="IXPRDT" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxmtxrlxm"/>
+    </set>
+    <set inverse="true" name="cxsuprsnxms">
+      <key>
+        <column name="IXPRDT" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Cxsuprsnxm"/>
+    </set>
+    <set inverse="true" name="cxprcsxms">
+      <key>
+        <column name="IXPRDT" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Cxprcsxm"/>
+    </set>
+    <set inverse="true" name="dxdmtxsmries">
+      <key>
+        <column name="IXPRDT" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Dxdmtxsmry"/>
+    </set>
+    <set inverse="true" name="pxstxarcvxtrns">
+      <key>
+        <column name="IXPRDT" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxstxarcvxtrn"/>
+    </set>
+    <set inverse="true" name="pxdlvryxchnlxms">
+      <key>
+        <column name="IXPRDT" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxdlvryxchnlxm"/>
+    </set>
+    <set inverse="true" name="pxmnlxgnrtnxms">
+      <key>
+        <column name="IXPRDT" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxmnlxgnrtnxm"/>
+    </set>
+    <set inverse="true" name="cxrlbkxms">
+      <key>
+        <column name="IXPRDT" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Cxrlbkxm"/>
+    </set>
+    <set inverse="true" name="pxbncdxtras">
+      <key>
+        <column name="IXPRDT" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxbncdxtra"/>
+    </set>
+    <set inverse="true" name="dxtrnsxsmryxms">
+      <key>
+        <column name="IXPRDT" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Dxtrnsxsmryxm"/>
+    </set>
+    <set inverse="true" name="pxstxarcvxms">
+      <key>
+        <column name="IXPRDT" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxstxarcvxm"/>
+    </set>
+    <set inverse="true" name="pxmtxgrpxms">
+      <key>
+        <column name="IXPRDT" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxmtxgrpxm"/>
+    </set>
+    <set inverse="true" name="pxetlxflxms">
+      <key>
+        <column name="IXPRDT" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxetlxflxm"/>
+    </set>
+    <set inverse="true" name="pxadxstxms">
+      <key>
+        <column name="IXPRDT" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxadxstxm"/>
+    </set>
+    <set inverse="true" name="dxprxprdtnxms">
+      <key>
+        <column name="IXPRDT" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Dxprxprdtnxm"/>
+    </set>
+    <set inverse="true" name="pxbncdxrsnxms">
+      <key>
+        <column name="IXPRDT" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxbncdxrsnxm"/>
+    </set>
+    <set inverse="true" name="pxprdctxdtls">
+      <key>
+        <column name="IXPRDT" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxprdctxdtl"/>
+    </set>
+    <set inverse="true" name="pxemlxpsdxms">
+      <key>
+        <column name="IXPRDT" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxemlxpsdxm"/>
+    </set>
+    <set inverse="true" name="dxprdtnxdtlsxms">
+      <key>
+        <column name="IXPRDT" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Dxprdtnxdtlsxm"/>
+    </set>
+    <set inverse="true" name="pxemlxcngs">
+      <key>
+        <column name="IXPRDT" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxemlxcng"/>
+    </set>
+    <set inverse="true" name="pxprdctxslas">
+      <key>
+        <column name="IXPRDT" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxprdctxsla"/>
+    </set>
+    <set inverse="true" name="pxusxprdctxlnks">
+      <key>
+        <column name="IXPRDT" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxusxprdctxlnk"/>
+    </set>
+  </class>
+</hibernate-mapping>

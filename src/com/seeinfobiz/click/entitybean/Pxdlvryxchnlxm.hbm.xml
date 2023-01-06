@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 22, 2011 11:02:27 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Pxdlvryxchnlxm"   table="PXDLVRYXCHNLXM">
+    <id name="idxchnl" type="long">
+      <column name="IDXCHNL" precision="20" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <many-to-one cascade="all" class="com.seeinfobiz.click.entitybean.Pxprdctxm" fetch="select" lazy="false" name="pxprdctxm">
+      <column name="IXPRDT" precision="20" scale="0"/>
+    </many-to-one>
+    <property name="typxstp" type="string">
+      <column length="20" name="TYPXSTP"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <property name="fmtxst" type="string">
+      <column length="20" name="FMTXST"/>
+    </property>
+    <property name="wdpxprctn" type="string">
+      <column length="1" name="WDPXPRCTN"/>
+    </property>
+    <property name="sgnxdgtl" type="string">
+      <column length="1" name="SGNXDGTL"/>
+    </property>
+    <property name="flxcmprs" type="string">
+      <column length="1" name="FLXCMPRS"/>
+    </property>
+    <property name="szxcmprs" type="string">
+      <column length="500" name="SZXCMPRS"/>
+    </property>
+    <property name="flxgrp" type="string">
+      <column length="500" name="FLXGRP"/>
+    </property>
+    <property name="szxgrp" type="string">
+      <column length="500" name="SZXGRP"/>
+    </property>
+    <property name="flxprnt" type="string">
+      <column length="1" name="FLXPRNT"/>
+    </property>
+    <property name="flxem" type="string">
+      <column length="1" name="FLXEM"/>
+    </property>
+    <property name="flxfx" type="string">
+      <column length="1" name="FLXFX"/>
+    </property>
+    <property name="flxxprt" type="string">
+      <column length="1" name="FLXXPRT"/>
+    </property>
+    <property name="flxsrch" type="string">
+      <column length="1" name="FLXSRCH"/>
+    </property>
+    <property name="flxrptxpl" type="string">
+      <column length="1" name="FLXRPTXPL"/>
+    </property>
+    <property name="prrty" type="long">
+      <column name="PRRTY" precision="22" scale="0"/>
+    </property>
+  </class>
+</hibernate-mapping>

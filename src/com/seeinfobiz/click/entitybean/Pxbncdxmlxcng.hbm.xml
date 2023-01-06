@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 29, 2010 8:08:34 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Pxbncdxmlxcng"   table="PXBNCDXMLXCNG">
+    <id name="ixcfgxmlxbncd" type="long">
+      <column name="IXCFGXMLXBNCD" precision="20" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <property name="ixmlxsndrxbncd" type="string">
+      <column length="100" name="IXMLXSNDRXBNCD"/>
+    </property>
+    <property name="psdxbncd" type="string">
+      <column length="100" name="PSDXBNCD"/>
+    </property>
+    <property name="hstxrcvrxbncd" type="string">
+      <column length="100" name="HSTXRCVRXBNCD"/>
+    </property>
+    <property name="prtxrcvrxbncd" type="string">
+      <column length="10" name="PRTXRCVRXBNCD"/>
+    </property>
+    <property name="fxdlxbncd" type="string">
+      <column length="1" name="FXDLXBNCD"/>
+    </property>
+    <property name="rmxbncd" type="string">
+      <column length="500" name="RMXBNCD"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <set inverse="true" name="pxprdctxms">
+      <key>
+        <column name="SRVXBNCD" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxprdctxm"/>
+    </set>
+    <set inverse="true" name="pxbncdxlstxrds">
+      <key>
+        <column name="IXCNFGXMLXBNCD" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxbncdxlstxrd"/>
+    </set>
+  </class>
+</hibernate-mapping>

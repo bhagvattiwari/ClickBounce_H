@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 27, 2010 11:57:53 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Pxbncdxrsnxm"   table="PXBNCDXRSNXM">
+    <id name="ixrsn" type="big_decimal">
+      <column name="IXRSN" precision="20" scale="0"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="com.seeinfobiz.click.entitybean.Pxprdctxm" fetch="select" name="pxprdctxm">
+      <column name="IXPRDT" precision="20" scale="0"/>
+    </many-to-one>
+    <many-to-one class="com.seeinfobiz.click.entitybean.Cxprcsxm" fetch="select" name="cxprcsxm">
+      <column name="IXPRCS" precision="20" scale="0"/>
+    </many-to-one>
+    <property name="nmxprdt" type="string">
+      <column length="100" name="NMXPRDT"/>
+    </property>
+    <property name="ixst" type="big_decimal">
+      <column name="IXST" precision="20" scale="0"/>
+    </property>
+    <property name="dxprcs" type="date">
+      <column length="7" name="DXPRCS"/>
+    </property>
+    <property name="flrxstg" type="string">
+      <column length="100" name="FLRXSTG"/>
+    </property>
+    <property name="rsns" type="string">
+      <column length="100" name="RSNS"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+  </class>
+</hibernate-mapping>

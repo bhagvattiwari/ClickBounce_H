@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 25, 2011 10:31:28 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Pxarcvxshdlrxm"   table="PXARCVXSHDLRXM">
+    <id name="ixshdlrxarcv" type="long">
+      <column name="IXSHDLRXARCV" precision="20" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <many-to-one class="com.seeinfobiz.click.entitybean.Pxstxarcvxm" fetch="select" name="pxstxarcvxmByIxrl">
+      <column name="IXRL" precision="20" scale="0"/>
+    </many-to-one>
+    <many-to-one class="com.seeinfobiz.click.entitybean.Pxstxarcvxm" fetch="select" name="pxstxarcvxmByIxprs">
+      <column name="IXPRS" precision="20" scale="0"/>
+    </many-to-one>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <property name="fr" type="string">
+      <column length="2" name="FR"/>
+    </property>
+    <property name="dy1xsch" type="long">
+      <column name="DY1XSCH" precision="22" scale="0"/>
+    </property>
+    <property name="dy2xsch" type="long">
+      <column name="DY2XSCH" precision="22" scale="0"/>
+    </property>
+    <property name="dy3xsch" type="long">
+      <column name="DY3XSCH" precision="22" scale="0"/>
+    </property>
+    <property name="dy4xsch" type="long">
+      <column name="DY4XSCH" precision="22" scale="0"/>
+    </property>
+    <property name="mntxschldrx1" type="string">
+      <column length="3" name="MNTXSCHLDRX1"/>
+    </property>
+    <property name="mntxschldrx2" type="string">
+      <column length="3" name="MNTXSCHLDRX2"/>
+    </property>
+    <property name="mntxschldrx3" type="string">
+      <column length="3" name="MNTXSCHLDRX3"/>
+    </property>
+    <property name="mntxschldrx4" type="string">
+      <column length="3" name="MNTXSCHLDRX4"/>
+    </property>
+    <property name="wd" type="long">
+      <column name="WD" precision="22" scale="0"/>
+    </property>
+    <property name="tm" type="string">
+      <column length="10" name="TM"/>
+    </property>
+    <property name="dy" type="string">
+      <column length="10" name="DY"/>
+    </property>
+  </class>
+</hibernate-mapping>

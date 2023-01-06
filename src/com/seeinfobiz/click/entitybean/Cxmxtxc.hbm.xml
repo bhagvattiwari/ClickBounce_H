@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 5, 2011 10:05:17 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Cxmxtxc"   table="CXMXTXC">
+    <id name="ixcmtc" type="long">
+      <column name="IXCMTC" precision="20" scale="0"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="ttlxprcs" type="long">
+      <column name="TTLXPRCS" precision="20" scale="0"/>
+    </property>
+    <property name="ttlxthrd" type="long">
+      <column name="TTLXTHRD" precision="20" scale="0"/>
+    </property>
+    <property name="vmxoptn" type="string">
+      <column length="100" name="VMXOPTN"/>
+    </property>
+  </class>
+</hibernate-mapping>

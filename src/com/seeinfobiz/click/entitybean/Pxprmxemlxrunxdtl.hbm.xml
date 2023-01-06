@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 31, 2011 11:55:03 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Pxprmxemlxrunxdtl"   table="PXPRMXEMLXRUNXDTL">
+    <id name="ixpxexd" type="big_decimal">
+      <column name="IXPXEXD" precision="20" scale="0"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="com.seeinfobiz.click.entitybean.Pxprmxemlxm" fetch="select" name="pxprmxemlxm">
+      <column name="IXPRM" precision="20" scale="0"/>
+    </many-to-one>
+    <property name="ixprmxemlxdtl" type="big_decimal">
+      <column name="IXPRMXEMLXDTL" not-null="true" precision="20" scale="0"/>
+    </property>
+    <property name="crn" type="string">
+      <column length="50" name="CRN"/>
+    </property>
+    <property name="ixem" type="string">
+      <column length="200" name="IXEM"/>
+    </property>
+    <property name="fxstts" type="string">
+      <column length="2" name="FXSTTS"/>
+    </property>
+    <property name="fldx4" type="string">
+      <column length="50" name="FLDX4"/>
+    </property>
+    <property name="fldx5" type="string">
+      <column length="50" name="FLDX5"/>
+    </property>
+    <property name="fldx6" type="string">
+      <column length="50" name="FLDX6"/>
+    </property>
+    <property name="fldx7" type="string">
+      <column length="50" name="FLDX7"/>
+    </property>
+    <property name="fldx8" type="string">
+      <column length="50" name="FLDX8"/>
+    </property>
+    <property name="fldx9" type="string">
+      <column length="50" name="FLDX9"/>
+    </property>
+    <property name="fldx10" type="string">
+      <column length="50" name="FLDX10"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+  </class>
+</hibernate-mapping>

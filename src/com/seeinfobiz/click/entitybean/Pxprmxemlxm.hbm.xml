@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 26, 2011 3:07:59 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Pxprmxemlxm"   table="PXPRMXEMLXM">
+    <id name="ixprm" type="long">
+      <column name="IXPRM" precision="20" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <property name="nmxrlxprm" type="string">
+      <column length="100" name="NMXRLXPRM"/>
+    </property>
+    <property name="adrsxfrmxem" type="string">
+      <column length="50" name="ADRSXFRMXEM"/>
+    </property>
+    <property name="ixbncdxem" type="string">
+      <column length="50" name="IXBNCDXEM"/>
+    </property>
+    <property name="sbxem" type="string">
+      <column length="50" name="SBXEM"/>
+    </property>
+    <property name="bdyxem" type="string">
+      <column length="4000" name="BDYXEM"/>
+    </property>
+    <property name="fxatchxem" type="boolean">
+      <column name="FXATCHXEM" not-null="true" precision="1" scale="0"/>
+    </property>
+    <property name="nmxflximg" type="string">
+      <column length="100" name="NMXFLXIMG"/>
+    </property>
+    <property name="qlfrxcrt" type="string">
+      <column length="2" name="QLFRXCRT" not-null="true"/>
+    </property>
+    <property name="prmtrxqryxem" type="string">
+      <column length="4000" name="PRMTRXQRYXEM"/>
+    </property>
+    <property name="dxsnt" type="date">
+      <column length="7" name="DXSNT"/>
+    </property>
+    <property name="fxstts" type="string">
+      <column length="2" name="FXSTTS" not-null="true"/>
+    </property>
+    <property name="rmksxmkrs" type="string">
+      <column length="1000" name="RMKSXMKRS"/>
+    </property>
+    <property name="chkrsxmkrs" type="string">
+      <column length="1000" name="CHKRSXMKRS"/>
+    </property>
+    <property name="rmksxem" type="string">
+      <column length="1000" name="RMKSXEM"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <property name="fxsubxbe" type="string">
+      <column length="100" name="FXSUBXBE"/>
+    </property>
+    <property name="fxsttsxsd" type="string">
+      <column length="3" name="FXSTTSXSD"/>
+    </property>
+    <property name="dtxsd" type="date">
+      <column length="7" name="DTXSD"/>
+    </property>
+    <property name="fxflxpath" type="string">
+      <column length="100" name="FXFLXPATH"/>
+    </property>
+    <property name="feildxx1" type="string">
+      <column length="50" name="FEILDXX1"/>
+    </property>
+    <property name="feildxx2" type="string">
+      <column length="50" name="FEILDXX2"/>
+    </property>
+    <property name="feildxx3" type="string">
+      <column length="50" name="FEILDXX3"/>
+    </property>
+    <property name="exexstts" type="string">
+      <column length="200" name="EXEXSTTS"/>
+    </property>
+    <property name="fxunsubxbe" type="string">
+      <column length="100" name="FXUNSUBXBE"/>
+    </property>
+    <property name="fxrdxrept" type="string">
+      <column length="20" name="FXRDXREPT"/>
+    </property>
+    <property name="fxunrdxrept" type="string">
+      <column length="20" name="FXUNRDXREPT"/>
+    </property>
+    <property name="ptxfilxin" type="string">
+      <column length="100" name="PTXFILXIN"/>
+    </property>
+    <property name="ixdpt" type="long">
+      <column name="IXDPT" precision="22" scale="0"/>
+    </property>
+    <property name="typxsch" type="string">
+      <column length="20" name="TYPXSCH"/>
+    </property>
+    <set inverse="true" name="pxprmxemlxdtlses">
+      <key>
+        <column name="IXPRM" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxprmxemlxdtls"/>
+    </set>
+    <set inverse="true" name="pxprmxemlxshdlrxdtlses">
+      <key>
+        <column name="IXPRM" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxprmxemlxshdlrxdtls"/>
+    </set>
+    <set inverse="true" name="pxprmximgxdtlses">
+      <key>
+        <column name="IXPRM" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxprmximgxdtls"/>
+    </set>
+    <set inverse="true" name="pxprmxemlxrunxdtls">
+      <key>
+        <column name="IXPRM" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxprmxemlxrunxdtl"/>
+    </set>
+  </class>
+</hibernate-mapping>

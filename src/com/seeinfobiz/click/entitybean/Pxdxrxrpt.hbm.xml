@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 21, 2011 5:11:40 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Pxdxrxrpt"   table="PXDXRXRPT">
+    <id name="ixdxr" type="long">
+      <column name="IXDXR" precision="20" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <property name="pthxdr" type="string">
+      <column length="100" name="PTHXDR"/>
+    </property>
+    <property name="pthxrr" type="string">
+      <column length="500" name="PTHXRR"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <property name="srvrxml" type="string">
+      <column length="20" name="SRVRXML"/>
+    </property>
+    <property name="srvrxhst" type="string">
+      <column length="20" name="SRVRXHST"/>
+    </property>
+    <property name="strngxhst" type="string">
+      <column length="20" name="STRNGXHST"/>
+    </property>
+    <property name="nmxur" type="string">
+      <column length="20" name="NMXUR"/>
+    </property>
+    <property name="wrdxpas" type="string">
+      <column length="20" name="WRDXPAS"/>
+    </property>
+  </class>
+</hibernate-mapping>

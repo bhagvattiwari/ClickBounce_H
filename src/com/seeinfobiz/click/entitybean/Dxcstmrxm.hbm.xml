@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 27, 2010 11:57:53 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Dxcstmrxm"   table="DXCSTMRXM">
+    <id name="ixcst" type="big_decimal">
+      <column name="IXCST" precision="20" scale="0"/>
+      <generator class="assigned"/>
+    </id>
+    <!--many-to-one class="com.seeinfobiz.click.entitybean.Dxbrnchxm" fetch="select" name="dxbrnchxm" lazy="false">
+      <column name="IXBRCH" precision="20" scale="0"/>
+    </many-to-one-->
+    <property name="crn" type="string">
+      <column length="20" name="CRN" unique="true"/>
+    </property>
+    <property name="nmxintl" type="string">
+      <column length="50" name="NMXINTL"/>
+    </property>
+    <property name="nmxfst" type="string">
+      <column length="50" name="NMXFST"/>
+    </property>
+    <property name="nmxmdl" type="string">
+      <column length="50" name="NMXMDL"/>
+    </property>
+    <property name="nmxlst" type="string">
+      <column length="50" name="NMXLST"/>
+    </property>
+    <property name="dob" type="date">
+      <column length="7" name="DOB"/>
+    </property>
+    <property name="noxpan" type="string">
+      <column length="50" name="NOXPAN"/>
+    </property>
+    <property name="ocptxn" type="string">
+      <column length="100" name="OCPTXN"/>
+    </property>
+    <property name="typxcstmr" type="string">
+      <column length="50" name="TYPXCSTMR"/>
+    </property>
+    <property name="noxcdextrdg" type="string">
+      <column length="100" name="NOXCDEXTRDG"/>
+    </property>
+    <property name="cdexclntxunq" type="string">
+      <column length="100" name="CDEXCLNTXUNQ"/>
+    </property>
+    <property name="flxnmn" type="string">
+      <column length="10" name="FLXNMN"/>
+    </property>
+    <property name="noxhldrxjnt" type="string">
+      <column length="50" name="NOXHLDRXJNT"/>
+    </property>
+    <property name="fldx1" type="string">
+      <column length="50" name="FLDX1"/>
+    </property>
+    <property name="fldx2" type="string">
+      <column length="50" name="FLDX2"/>
+    </property>
+    <property name="fldx3" type="string">
+      <column length="50" name="FLDX3"/>
+    </property>
+    <property name="fldx4" type="string">
+      <column length="50" name="FLDX4"/>
+    </property>
+    <property name="fldx5" type="string">
+      <column length="50" name="FLDX5"/>
+    </property>
+    <property name="fldx6" type="string">
+      <column length="50" name="FLDX6"/>
+    </property>
+    <property name="fldx7" type="string">
+      <column length="50" name="FLDX7"/>
+    </property>
+    <property name="fldx8" type="string">
+      <column length="50" name="FLDX8"/>
+    </property>
+    <property name="fldx9" type="string">
+      <column length="50" name="FLDX9"/>
+    </property>
+    <property name="fldx10" type="string">
+      <column length="50" name="FLDX10"/>
+    </property>
+    <property name="fldx11" type="string">
+      <column length="50" name="FLDX11"/>
+    </property>
+    <property name="fldx12" type="string">
+      <column length="50" name="FLDX12"/>
+    </property>
+    <property name="fldx13" type="string">
+      <column length="50" name="FLDX13"/>
+    </property>
+    <property name="fldx14" type="string">
+      <column length="50" name="FLDX14"/>
+    </property>
+    <property name="fldx15" type="string">
+      <column length="50" name="FLDX15"/>
+    </property>
+    <property name="fldx16" type="string">
+      <column length="50" name="FLDX16"/>
+    </property>
+    <property name="fldx17" type="string">
+      <column length="50" name="FLDX17"/>
+    </property>
+    <property name="fldx18" type="string">
+      <column length="50" name="FLDX18"/>
+    </property>
+    <property name="fldx19" type="string">
+      <column length="50" name="FLDX19"/>
+    </property>
+    <property name="fldx20" type="string">
+      <column length="50" name="FLDX20"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <property name="ixprdt" type="long">
+      <column name="IXPRDT" precision="20" scale="0"/>
+    </property>
+    <set inverse="true" name="dxprdtnxdtlsxms">
+      <key>
+        <column name="IXCST" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Dxprdtnxdtlsxm"/>
+    </set>
+    <set inverse="true" name="dxcstmrxjntldrxdtlses">
+      <key>
+        <column name="IXCST" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Dxcstmrxjntldrxdtls"/>
+    </set>
+    <set inverse="true" name="dxtrnsxsmryxms">
+      <key>
+        <column name="IXCST" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Dxtrnsxsmryxm"/>
+    </set>
+    <set inverse="true" name="dxcstmrxdtlses">
+      <key>
+        <column name="IXCST" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Dxcstmrxdtls"/>
+    </set>
+  </class>
+</hibernate-mapping>

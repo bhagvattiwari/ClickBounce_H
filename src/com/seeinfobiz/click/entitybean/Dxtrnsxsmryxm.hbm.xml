@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 27, 2010 11:57:53 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Dxtrnsxsmryxm"   table="DXTRNSXSMRYXM">
+    <id name="ixsmryxtrns" type="big_decimal">
+      <column name="IXSMRYXTRNS" precision="20" scale="0"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one cascade="all" class="com.seeinfobiz.click.entitybean.Dxcstmrxm" fetch="select" lazy="false" name="dxcstmrxm">
+      <column name="IXCST" precision="20" scale="0"/>
+    </many-to-one>
+    <many-to-one class="com.seeinfobiz.click.entitybean.Pxprdctxm" fetch="select" name="pxprdctxm">
+      <column name="IXPRDT" precision="20" scale="0"/>
+    </many-to-one>
+    <property name="noxact" type="big_decimal">
+      <column name="NOXACT" precision="20" scale="0"/>
+    </property>
+    <property name="dxst" type="date">
+      <column length="7" name="DXST"/>
+    </property>
+    <property name="dxfrmxst" type="date">
+      <column length="7" name="DXFRMXST"/>
+    </property>
+    <property name="dxtoxst" type="date">
+      <column length="7" name="DXTOXST"/>
+    </property>
+    <property name="cdexcrncy" type="string">
+      <column length="20" name="CDEXCRNCY"/>
+    </property>
+    <property name="amtxln" type="big_decimal">
+      <column name="AMTXLN" precision="20" scale="0"/>
+    </property>
+    <property name="dtlsxnmn" type="string">
+      <column length="20" name="DTLSXNMN"/>
+    </property>
+    <property name="acntxstts" type="string">
+      <column length="50" name="ACNTXSTTS"/>
+    </property>
+    <property name="balxopng" type="big_decimal">
+      <column name="BALXOPNG" precision="20" scale="0"/>
+    </property>
+    <property name="balxclsg" type="big_decimal">
+      <column name="BALXCLSG" precision="20" scale="0"/>
+    </property>
+    <property name="fldx1" type="string">
+      <column length="50" name="FLDX1"/>
+    </property>
+    <property name="fldx2" type="string">
+      <column length="50" name="FLDX2"/>
+    </property>
+    <property name="fldx3" type="string">
+      <column length="50" name="FLDX3"/>
+    </property>
+    <property name="fldx4" type="string">
+      <column length="50" name="FLDX4"/>
+    </property>
+    <property name="fldx5" type="string">
+      <column length="50" name="FLDX5"/>
+    </property>
+    <property name="fldx6" type="string">
+      <column length="50" name="FLDX6"/>
+    </property>
+    <property name="fldx7" type="string">
+      <column length="50" name="FLDX7"/>
+    </property>
+    <property name="fldx8" type="string">
+      <column length="50" name="FLDX8"/>
+    </property>
+    <property name="fldx9" type="string">
+      <column length="50" name="FLDX9"/>
+    </property>
+    <property name="fldx10" type="string">
+      <column length="50" name="FLDX10"/>
+    </property>
+    <property name="fldx11" type="string">
+      <column length="50" name="FLDX11"/>
+    </property>
+    <property name="fldx12" type="string">
+      <column length="50" name="FLDX12"/>
+    </property>
+    <property name="fldx13" type="string">
+      <column length="50" name="FLDX13"/>
+    </property>
+    <property name="fldx14" type="string">
+      <column length="50" name="FLDX14"/>
+    </property>
+    <property name="fldx15" type="string">
+      <column length="50" name="FLDX15"/>
+    </property>
+    <property name="fldx16" type="string">
+      <column length="50" name="FLDX16"/>
+    </property>
+    <property name="fldx17" type="string">
+      <column length="50" name="FLDX17"/>
+    </property>
+    <property name="fldx18" type="string">
+      <column length="50" name="FLDX18"/>
+    </property>
+    <property name="fldx19" type="string">
+      <column length="50" name="FLDX19"/>
+    </property>
+    <property name="fldx20" type="string">
+      <column length="50" name="FLDX20"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <set inverse="true" name="dxdmtxsmries">
+      <key>
+        <column name="IXSMRXTRS" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Dxdmtxsmry"/>
+    </set>
+    <set inverse="true" name="dxtelomxsmries">
+      <key>
+        <column name="IXSMRYXTRS" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Dxtelomxsmry"/>
+    </set>
+    <set inverse="true" name="dxtrnsxccxsmries">
+      <key>
+        <column name="IXSMRYXTRNS" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Dxtrnsxccxsmry"/>
+    </set>
+    <set inverse="true" name="dxtrnsxdtlses">
+      <key>
+        <column name="IXSMYXTR" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Dxtrnsxdtls"/>
+    </set>
+    <set inverse="true" name="dxinsuxsmries">
+      <key>
+        <column name="IXSMRYXTRNS" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Dxinsuxsmry"/>
+    </set>
+    <set inverse="true" name="dxtrnsxchrgxdtlses">
+      <key>
+        <column name="IXSMRYXTRNS" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Dxtrnsxchrgxdtls"/>
+    </set>
+    <set inverse="true" name="dxtrnsxsmryxdtlses">
+      <key>
+        <column name="IXSMRYXTRNS" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Dxtrnsxsmryxdtls"/>
+    </set>
+  </class>
+</hibernate-mapping>

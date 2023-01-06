@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 2, 2010 10:12:23 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Pxbncdxtra"   table="PXBNCDXTRA">
+    <id name="ixbncdxhrdxsft" type="long">
+      <column name="IXBNCDXHRDXSFT" precision="20" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <many-to-one class="com.seeinfobiz.click.entitybean.Pxprdctxm" fetch="select" name="pxprdctxm">
+      <column name="IXPRDT" precision="20" scale="0"/>
+    </many-to-one>
+    <property name="crn" type="string">
+      <column length="100" name="CRN"/>
+    </property>
+    <property name="dtxst" type="date">
+      <column length="7" name="DTXST"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <property name="catxbou" type="string">
+      <column length="2" name="CATXBOU"/>
+    </property>
+    <property name="conxbou" type="string">
+      <column length="100" name="CONXBOU"/>
+    </property>
+    <property name="rexo" type="string">
+      <column length="100" name="REXO"/>
+    </property>
+    <property name="dtxprcs" type="date">
+      <column length="7" name="DTXPRCS"/>
+    </property>
+    <property name="ixprcs" type="long">
+      <column name="IXPRCS" precision="20" scale="0"/>
+    </property>
+    <property name="sttsxbncd" type="string">
+      <column length="200" name="STTSXBNCD"/>
+    </property>
+    <property name="ixemxbncd" type="string">
+      <column length="200" name="IXEMXBNCD"/>
+    </property>
+    <property name="dtxarrvl" type="string">
+      <column length="200" name="DTXARRVL"/>
+    </property>
+    <property name="ixem" type="string">
+            <column name="IXEM" length="50" />
+        </property>
+        <property name="logo" type="string">
+            <column name="LOGO" length="20" />
+        </property>
+        <property name="noxacnt" type="string">
+            <column name="NOXACNT" length="50" />
+        </property>
+        <property name="flxdelevry" type="string">
+            <column name="FLXDELEVRY" length="20" />
+        </property>
+         <property name="acntxtyp" type="string">
+            <column name="ACNTXTYP" length="20" />
+        </property>
+         <property name="cxfile" type="string">
+            <column name="CXFILE" length="20" />
+        </property>
+        <property name="nmxfst" type="string">
+            <column name="NMXFST" length="100" />
+        </property>
+         <property name="cdexreg" type="string">
+            <column name="CDEXREG" length="20" />
+        </property>
+
+  </class>
+</hibernate-mapping>

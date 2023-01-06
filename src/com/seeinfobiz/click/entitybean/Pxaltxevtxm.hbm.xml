@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 27, 2010 11:57:53 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Pxaltxevtxm"   table="PXALTXEVTXM">
+    <id name="ixalrt" type="long">
+      <column name="IXALRT" precision="20" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <property name="nmxevnt" type="string">
+      <column length="50" name="NMXEVNT"/>
+    </property>
+    <property name="crtraxalrt" type="string">
+      <column length="100" name="CRTRAXALRT"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <set inverse="true" name="pxaltxevtxdtses">
+      <key>
+        <column name="IXALRT" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxaltxevtxdts"/>
+    </set>
+  </class>
+</hibernate-mapping>

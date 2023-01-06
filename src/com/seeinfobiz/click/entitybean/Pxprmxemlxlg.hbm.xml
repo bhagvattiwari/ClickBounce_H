@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 2, 2011 5:31:33 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Pxprmxemlxlg"   table="PXPRMXEMLXLG">
+    <id name="ixprmxlg" type="long">
+      <column name="IXPRMXLG" precision="20" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <property name="ixprm" type="long">
+      <column name="IXPRM" precision="20" scale="0"/>
+    </property>
+    <property name="dxsnt" type="date">
+      <column length="7" name="DXSNT"/>
+    </property>
+    <property name="ttlxcst" type="string">
+      <column length="50" name="TTLXCST"/>
+    </property>
+    <property name="ttlxeml" type="long">
+      <column name="TTLXEML" precision="20" scale="0"/>
+    </property>
+    <property name="ttlxbncd" type="long">
+      <column name="TTLXBNCD" precision="20" scale="0"/>
+    </property>
+    <property name="ttlxfald" type="long">
+      <column name="TTLXFALD" precision="20" scale="0"/>
+    </property>
+    <property name="ttlxredxrept" type="long">
+      <column name="TTLXREDXREPT" precision="20" scale="0"/>
+    </property>
+    <property name="ttlxunred" type="long">
+      <column name="TTLXUNRED" precision="20" scale="0"/>
+    </property>
+    <property name="ttlxsbxrbe" type="long">
+      <column name="TTLXSBXRBE" precision="20" scale="0"/>
+    </property>
+    <property name="ttlxunsbxrbe" type="long">
+      <column name="TTLXUNSBXRBE" precision="20" scale="0"/>
+    </property>
+    <property name="fldx1" type="string">
+      <column length="50" name="FLDX1"/>
+    </property>
+    <property name="fldx2" type="string">
+      <column length="50" name="FLDX2"/>
+    </property>
+    <property name="fldx3" type="string">
+      <column length="50" name="FLDX3"/>
+    </property>
+    <property name="fldx4" type="string">
+      <column length="50" name="FLDX4"/>
+    </property>
+    <property name="fldx5" type="string">
+      <column length="50" name="FLDX5"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <property name="ttlxundlv" type="string">
+      <column length="100" name="TTLXUNDLV"/>
+    </property>
+    <property name="ttlxdlv" type="string">
+      <column length="100" name="TTLXDLV"/>
+    </property>
+    <set inverse="true" name="pxprmxemlxlgxdtlses">
+      <key>
+        <column name="IXPRMXLG" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxprmxemlxlgxdtls"/>
+    </set>
+  </class>
+</hibernate-mapping>

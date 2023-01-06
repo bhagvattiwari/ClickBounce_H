@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 27, 2010 11:57:53 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Pxarcvxshdlrxmde"   table="PXARCVXSHDLRXMDE">
+    <id name="ixmdxshdlrxarcv" type="big_decimal">
+      <column name="IXMDXSHDLRXARCV" precision="20" scale="0"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="com.seeinfobiz.click.entitybean.Pxarcvxshdlrxm" fetch="select" name="pxarcvxshdlrxm">
+      <column name="IXSHDLRXARCV" precision="20" scale="0"/>
+    </many-to-one>
+    <property name="mdxschdlr" type="string">
+      <column length="1" name="MDXSCHDLR"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <set inverse="true" name="pxarcvxshdlrxdtlses">
+      <key>
+        <column name="IXMDXSHDLRXARCV" not-null="true" precision="20" scale="0" unique="true"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxarcvxshdlrxdtls"/>
+    </set>
+  </class>
+</hibernate-mapping>

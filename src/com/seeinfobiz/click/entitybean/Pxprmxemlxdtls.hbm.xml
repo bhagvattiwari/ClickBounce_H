@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 27, 2010 11:57:53 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Pxprmxemlxdtls"   table="PXPRMXEMLXDTLS">
+    <id name="ixtxnxprm" type="long">
+      <column name="IXTXNXPRM" precision="20" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <many-to-one cascade="all" class="com.seeinfobiz.click.entitybean.Pxprmxemlxm" fetch="select" lazy="false" name="pxprmxemlxm">
+      <column name="IXPRM" precision="20" scale="0"/>
+    </many-to-one>
+    <property name="nmxflxem" type="string">
+      <column length="100" name="NMXFLXEM"/>
+    </property>
+    <property name="lcxflxem" type="string">
+      <column length="1000" name="LCXFLXEM"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <property name="attchxnmxflxem1" type="string">
+      <column length="100" name="ATTCHXNMXFLXEM1"/>
+    </property>
+    <property name="attchxlcxflxem1" type="string">
+      <column length="1000" name="ATTCHXLCXFLXEM1"/>
+    </property>
+    <property name="attchxnmxflxem2" type="string">
+      <column length="100" name="ATTCHXNMXFLXEM2"/>
+    </property>
+    <property name="attchxlcxflxem2" type="string">
+      <column length="1000" name="ATTCHXLCXFLXEM2"/>
+    </property>
+    <property name="attchxnmxflxem3" type="string">
+      <column length="100" name="ATTCHXNMXFLXEM3"/>
+    </property>
+    <property name="attchxlcxflxem3" type="string">
+      <column length="1000" name="ATTCHXLCXFLXEM3"/>
+    </property>
+  </class>
+</hibernate-mapping>

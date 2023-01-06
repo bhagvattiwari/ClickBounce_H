@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 27, 2011 2:44:51 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Pxrdxdrxm"   table="PXRDXDRXM">
+    <id name="ixrxdx" type="long">
+      <column name="IXRXDX" precision="20" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <property name="nmshdlrxtyp" type="string">
+      <column length="20" name="NMSHDLRXTYP"/>
+    </property>
+    <property name="nmxemlshdlrxtyp" type="string">
+      <column length="20" name="NMXEMLSHDLRXTYP"/>
+    </property>
+    <property name="tmxschldrxwk" type="string">
+      <column length="20" name="TMXSCHLDRXWK"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <set inverse="true" name="pxrdxdrxshdlrxdtlses">
+      <key>
+        <column name="IXRXDX" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxrdxdrxshdlrxdtls"/>
+    </set>
+  </class>
+</hibernate-mapping>

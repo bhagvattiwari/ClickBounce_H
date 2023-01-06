@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 27, 2012 10:53:17 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Pxshdlrxm"   table="PXSHDLRXM">
+    <id name="ixmxshdlr" type="long">
+      <column name="IXMXSHDLR" precision="20" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <property name="dxshdlrxcur" type="timestamp">
+      <column length="7" name="DXSHDLRXCUR"/>
+    </property>
+    <property name="dxshdlrxnxt" type="timestamp">
+      <column length="7" name="DXSHDLRXNXT"/>
+    </property>
+    <property name="typxshdlr" type="string">
+      <column length="50" name="TYPXSHDLR"/>
+    </property>
+    <property name="mdexshdlr" type="string">
+      <column length="50" name="MDEXSHDLR"/>
+    </property>
+    <property name="ixprdt" type="string">
+      <column length="50" name="IXPRDT"/>
+    </property>
+    <property name="dltdxflg" type="string">
+      <column length="1" name="DLTDXFLG"/>
+    </property>
+    <property name="stts" type="string">
+      <column length="50" name="STTS"/>
+    </property>
+    <property name="nxcycxle" type="long">
+      <column length="50" name="NXCYCXLE"/>
+    </property>
+    <property name="nmxschxm" type="string">
+      <column length="50" name="NMXSCHXM"/>
+    </property>
+    <set inverse="true" name="pxshdlrxarcvs">
+      <key>
+        <column name="IXMXSHDLR" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxshdlrxarcv"/>
+    </set>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <!-- added for hdfc ergo req-->
+    <property name="flgxbpxfp" type="string">
+      <column length="20" name="FLGXBPXFP"/>
+    </property>
+    <property name="flgxlgoxw" type="string">
+      <column length="20" name="FLGXLGOXW"/>
+    </property>
+    <property name="flgxlgoxwo" type="string">
+      <column length="20" name="FLGXLGOXWO"/>
+    </property>
+    <property name="flgxlgoxeml" type="string">
+      <column length="20" name="FLGXLGOXEML"/>
+    </property>
+    <property name="nmxschxprxm" type="string">
+      <column length="200" name="NMXSHXPRXNM"/>
+    </property>
+    <property name="flgxrecsv" type="string">
+      <column length="20" name="FLGXRECSV"/>
+    </property>
+  </class>
+</hibernate-mapping>

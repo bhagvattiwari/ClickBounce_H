@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 8, 2011 5:53:57 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Dxcstmrxdtls"   table="DXCSTMRXDTLS">
+    <id name="ixdtlsxcst" type="long">
+      <column name="IXDTLSXCST" precision="20" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <many-to-one cascade="all" class="com.seeinfobiz.click.entitybean.Dxcstmrxm" fetch="select" lazy="false" name="dxcstmrxm">
+      <column name="IXCST" precision="20" scale="0"/>
+    </many-to-one>
+    <property name="noxacnt" type="long">
+      <column name="NOXACNT" precision="20" scale="0"/>
+    </property>
+    <property name="drs1xa" type="string">
+      <column length="100" name="DRS1XA"/>
+    </property>
+    <property name="drs2xa" type="string">
+      <column length="100" name="DRS2XA"/>
+    </property>
+    <property name="drs3xa" type="string">
+      <column length="100" name="DRS3XA"/>
+    </property>
+    <property name="nmxcty" type="string">
+      <column length="100" name="NMXCTY"/>
+    </property>
+    <property name="nmxst" type="string">
+      <column length="50" name="NMXST"/>
+    </property>
+    <property name="cntry" type="string">
+      <column length="50" name="CNTRY"/>
+    </property>
+    <property name="cdexzp" type="string">
+      <column length="50" name="CDEXZP"/>
+    </property>
+    <property name="ixem" type="string">
+      <column length="100" name="IXEM"/>
+    </property>
+    <property name="ixemxalt" type="string">
+      <column length="100" name="IXEMXALT"/>
+    </property>
+    <property name="noxfx" type="string">
+      <column length="50" name="NOXFX"/>
+    </property>
+    <property name="noxcntct" type="string">
+      <column length="50" name="NOXCNTCT"/>
+    </property>
+    <property name="noxmbl" type="string">
+      <column length="50" name="NOXMBL"/>
+    </property>
+    <property name="flxsttsxadrs" type="string">
+      <column length="1" name="FLXSTTSXADRS"/>
+    </property>
+    <property name="dxfrmxads" type="date">
+      <column length="7" name="DXFRMXADS"/>
+    </property>
+    <property name="dxtoxads" type="date">
+      <column length="7" name="DXTOXADS"/>
+    </property>
+    <property name="flxfrncy" type="string">
+      <column length="1" name="FLXFRNCY"/>
+    </property>
+    <property name="flxchnlxdlvy" type="long">
+      <column name="FLXCHNLXDLVY" precision="20" scale="0"/>
+    </property>
+    <property name="fldx1" type="string">
+      <column length="50" name="FLDX1"/>
+    </property>
+    <property name="fldx2" type="string">
+      <column length="50" name="FLDX2"/>
+    </property>
+    <property name="fldx3" type="string">
+      <column length="50" name="FLDX3"/>
+    </property>
+    <property name="fldx4" type="string">
+      <column length="50" name="FLDX4"/>
+    </property>
+    <property name="fldx5" type="string">
+      <column length="50" name="FLDX5"/>
+    </property>
+    <property name="fldx6" type="string">
+      <column length="50" name="FLDX6"/>
+    </property>
+    <property name="fldx7" type="string">
+      <column length="50" name="FLDX7"/>
+    </property>
+    <property name="fldx8" type="string">
+      <column length="50" name="FLDX8"/>
+    </property>
+    <property name="fldx9" type="string">
+      <column length="50" name="FLDX9"/>
+    </property>
+    <property name="fldx10" type="string">
+      <column length="50" name="FLDX10"/>
+    </property>
+    <property name="fldx11" type="string">
+      <column length="50" name="FLDX11"/>
+    </property>
+    <property name="fldx12" type="string">
+      <column length="50" name="FLDX12"/>
+    </property>
+    <property name="fldx13" type="string">
+      <column length="50" name="FLDX13"/>
+    </property>
+    <property name="fldx14" type="string">
+      <column length="50" name="FLDX14"/>
+    </property>
+    <property name="fldx15" type="string">
+      <column length="50" name="FLDX15"/>
+    </property>
+    <property name="fldx16" type="string">
+      <column length="50" name="FLDX16"/>
+    </property>
+    <property name="fldx17" type="string">
+      <column length="50" name="FLDX17"/>
+    </property>
+    <property name="fldx18" type="string">
+      <column length="50" name="FLDX18"/>
+    </property>
+    <property name="fldx19" type="string">
+      <column length="50" name="FLDX19"/>
+    </property>
+    <property name="fldx20" type="string">
+      <column length="50" name="FLDX20"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <property name="axcdexbr" type="string">
+      <column length="100" name="AXCDEXBR"/>
+    </property>
+    <property name="axnmxbr" type="string">
+      <column length="50" name="AXNMXBR"/>
+    </property>
+    <property name="acntxtyp" type="string">
+      <column length="50" name="ACNTXTYP"/>
+    </property>
+    <property name="schmxtyp" type="string">
+      <column length="50" name="SCHMXTYP"/>
+    </property>
+    <property name="ixstmt" type="long">
+      <column name="IXSTMT" precision="20" scale="0"/>
+    </property>
+    <property name="dxstmt" type="date">
+      <column length="7" name="DXSTMT"/>
+    </property>
+    <property name="ixprdt" type="long">
+      <column name="IXPRDT" precision="20" scale="0"/>
+    </property>
+    <property name="ixprcs" type="long">
+      <column name="IXPRCS" precision="20" scale="0"/>
+    </property>
+    <property name="stxstxdt" type="date">
+      <column length="7" name="STXSTXDT"/>
+    </property>
+    <property name="stxenxdt" type="date">
+      <column length="7" name="STXENXDT"/>
+    </property>
+    <property name="ovrxdu" type="string">
+      <column length="200" name="OVRXDU"/>
+    </property>
+    <property name="uxclrxbl" type="string">
+      <column length="200" name="UXCLRXBL"/>
+    </property>
+    <property name="ixrt" type="string">
+      <column length="20" name="IXRT"/>
+    </property>
+    <property name="matxdt" type="date">
+      <column length="7" name="MATXDT"/>
+    </property>
+    <property name="psxdu" type="string">
+      <column length="20" name="PSXDU"/>
+    </property>
+    <property name="totxcrdt" type="string">
+      <column length="20" name="TOTXCRDT"/>
+    </property>
+    <property name="minxpayxd" type="string">
+      <column length="20" name="MINXPAYXD"/>
+    </property>
+    <property name="pyxduxdt" type="date">
+      <column length="7" name="PYXDUXDT"/>
+    </property>
+    <property name="rwrdxopxbl" type="string">
+      <column length="20" name="RWRDXOPXBL"/>
+    </property>
+    <property name="rwrdxernd" type="string">
+      <column length="20" name="RWRDXERND"/>
+    </property>
+    <property name="rwrdxred" type="string">
+      <column length="20" name="RWRDXRED"/>
+    </property>
+    <property name="rwrdxclsnxbl" type="string">
+      <column length="20" name="RWRDXCLSNXBL"/>
+    </property>
+    <property name="cdrxnmbr" type="string">
+      <column length="20" name="CDRXNMBR"/>
+    </property>
+    <property name="ixserty" type="string">
+      <column length="200" name="IXSERTY"/>
+    </property>
+    <property name="qtxrec" type="string">
+      <column length="20" name="QTXREC"/>
+    </property>
+    <property name="qtxdel" type="string">
+      <column length="20" name="QTXDEL"/>
+    </property>
+    <property name="blxdt" type="string">
+      <column length="50" name="BLXDT"/>
+    </property>
+    <property name="prexexstxcndtn" type="string">
+      <column length="200" name="PREXEXSTXCNDTN"/>
+    </property>
+    <property name="exstxsnce" type="string">
+      <column length="200" name="EXSTXSNCE"/>
+    </property>
+    <property name="nomnxnm" type="string">
+      <column length="200" name="NOMNXNM"/>
+    </property>
+    <property name="frstxplcyxcmmncxdt" type="string">
+      <column length="200" name="FRSTXPLCYXCMMNCXDT"/>
+    </property>
+    <property name="srvcxtaxxcde" type="string">
+      <column length="200" name="SRVCXTAXXCDE"/>
+    </property>
+    <property name="srvcxtaxxrgstrtn" type="string">
+      <column length="200" name="SRVCXTAXXRGSTRTN"/>
+    </property>
+    <property name="aplctnxno" type="string">
+      <column length="200" name="APLCTNXNO"/>
+    </property>
+    <property name="unvrsty" type="string">
+      <column length="200" name="UNVRSTY"/>
+    </property>
+    <property name="corse" type="string">
+      <column length="200" name="CORSE"/>
+    </property>
+    <property name="unvrstyxadrs" type="string">
+      <column length="200" name="UNVRSTYXADRS"/>
+    </property>
+    <property name="unvrstyxst" type="string">
+      <column length="200" name="UNVRSTYXST"/>
+    </property>
+    <property name="unvrstyxcntry" type="string">
+      <column length="200" name="UNVRSTYXCNTRY"/>
+    </property>
+    <property name="typxofxtrip" type="string">
+      <column length="200" name="TYPXOFXTRIP"/>
+    </property>
+    <property name="polcyxpriod" type="string">
+      <column length="200" name="POLCYXPRIOD"/>
+    </property>
+    <property name="geoxscope" type="string">
+      <column length="200" name="GEOXSCOPE"/>
+    </property>
+    <property name="dlvryxchnel" type="string">
+      <column length="200" name="DLVRYXCHNEL"/>
+    </property>
+    <property name="sponsorxdob" type="string">
+      <column length="20" name="SPONSORXDOB"/>
+    </property>
+    <property name="noxofxlives" type="string">
+      <column length="200" name="NOXOFXLIVES"/>
+    </property>
+    <property name="fmlyxdfntn" type="string">
+      <column length="200" name="FMLYXDFNTN"/>
+    </property>
+    <property name="typxcrd" type="string">
+      <column length="50" name="TYPXCRD"/>
+    </property>
+    <property name="cshxlmt" type="string">
+      <column length="200" name="CSHXLMT"/>
+    </property>
+    <property name="ovrdrftxamt" type="string">
+      <column length="200" name="OVRDRFTXAMT"/>
+    </property>
+    <property name="opnxdt" type="string">
+      <column length="200" name="OPNXDT"/>
+    </property>
+    <property name="strctxfldr" type="string">
+      <column length="500" name="STRCTXFLDR"/>
+    </property>
+     <property name="cdexreg" type="string">
+      <column length="500" name="CDEXREG"/>
+    </property>
+
+  </class>
+</hibernate-mapping>

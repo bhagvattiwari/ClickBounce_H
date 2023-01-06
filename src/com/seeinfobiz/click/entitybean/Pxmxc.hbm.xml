@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 5, 2011 10:05:17 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Pxmxc"   table="PXMXC">
+    <id name="sxno" type="long">
+      <column name="SXNO" precision="20" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <property name="crn" type="string">
+      <column length="50" name="CRN"/>
+    </property>
+    <property name="ixprcs" type="long">
+      <column name="IXPRCS" precision="20" scale="0"/>
+    </property>
+    <property name="ixstmt" type="long">
+      <column name="IXSTMT" precision="20" scale="0"/>
+    </property>
+    <property name="ixprdt" type="long">
+      <column name="IXPRDT" precision="20" scale="0"/>
+    </property>
+  </class>
+</hibernate-mapping>

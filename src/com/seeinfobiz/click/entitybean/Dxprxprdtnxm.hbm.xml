@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 27, 2010 11:57:53 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Dxprxprdtnxm"   table="DXPRXPRDTNXM">
+    <id name="ixprdtnxpr" type="long">
+      <column name="IXPRDTNXPR" precision="20" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <many-to-one class="com.seeinfobiz.click.entitybean.Pxprdctxm" fetch="select" lazy="false" name="pxprdctxm">
+      <column name="IXPRDT" precision="20" scale="0"/>
+    </many-to-one>
+    <property name="dtxcycxbil" type="date">
+      <column length="7" name="DTXCYCXBIL"/>
+    </property>
+    <property name="flxprexpro" type="string">
+      <column length="1" name="FLXPREXPRO"/>
+    </property>
+    <property name="paxfil" type="string">
+      <column length="100" name="PAXFIL"/>
+    </property>
+    <property name="genxstmtxnum" type="long">
+      <column name="GENXSTMTXNUM" precision="20" scale="0"/>
+    </property>
+    <property name="frmtxotpt" type="string">
+      <column length="10" name="FRMTXOTPT"/>
+    </property>
+    <property name="flxexec" type="string">
+      <column length="1" name="FLXEXEC"/>
+    </property>
+    <property name="dtxsch" type="date">
+      <column length="7" name="DTXSCH"/>
+    </property>
+    <property name="flxgo" type="string">
+      <column length="1" name="FLXGO"/>
+    </property>
+    <property name="commxgo" type="string">
+      <column length="100" name="COMMXGO"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <property name="qtxsmpl" type="long">
+      <column name="QTXSMPL" precision="22" scale="0"/>
+    </property>
+    <property name="comm" type="string">
+      <column length="100" name="COMM"/>
+    </property>
+    <property name="dxqaxdt" type="date">
+      <column length="7" name="DXQAXDT"/>
+    </property>
+    <property name="nmxprdtnxpr" type="string">
+      <column length="50" name="NMXPRDTNXPR"/>
+    </property>
+    <property name="flxqa" type="string">
+      <column length="1" name="FLXQA"/>
+    </property>
+    <property name="ixdpt" type="long">
+      <column name="IXDPT" precision="22" scale="0"/>
+    </property>
+     <property name="cxfile" type="string">
+            <column name="CXFILE" length="50" />
+        </property>
+  </class>
+  <query name="findAllWhereQADone">
+        from Dxprxprdtnxm pp,Dxprdtnxdtlsxm pr
+        where pp.ixprdtnxpr=pr.fldx16 and pp.flxqa='Y'
+        and pr.fldx19='PP'
+    </query>
+  <!--query name="findAllWhereQANotDone">
+        select distinct pp from Dxprxprdtnxm pp,Dxprdtnxdtlsxm pr
+        where pp.ixprdtnxpr=pr.fldx16 and pr.fldx18='N'
+        and pr.fldx19='pp'
+    </query-->
+</hibernate-mapping>

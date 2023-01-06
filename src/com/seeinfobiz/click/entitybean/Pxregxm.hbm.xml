@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 27, 2010 11:57:53 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Pxregxm"   table="PXREGXM">
+    <id name="ixrg" type="long">
+      <column name="IXRG" precision="20" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <property name="dsxrg" type="string">
+      <column length="100" name="DSXRG"/>
+    </property>
+    <property name="nmxrg" type="string">
+      <column length="100" name="NMXRG"/>
+    </property>
+    <property name="rm" type="string">
+      <column length="100" name="RM"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <set inverse="true" name="pxusxregxlnks">
+      <key>
+        <column name="IXRG" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxusxregxlnk"/>
+    </set>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 27, 2010 11:57:53 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Pxacnxnm"   table="PXACNXNM">
+    <id name="ixacn" type="long">
+      <column name="IXACN" precision="20" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <many-to-one cascade="all" class="com.seeinfobiz.click.entitybean.Pxusxact" fetch="select" lazy="false" name="pxusxact">
+      <column name="IXACTSXU" precision="20" scale="0"/>
+    </many-to-one>
+    <many-to-one cascade="all" class="com.seeinfobiz.click.entitybean.Pxmnxds" fetch="select" lazy="false" name="pxmnxds">
+      <column name="IXMN" precision="20" scale="0"/>
+    </many-to-one>
+    <property name="nmxacn" type="string">
+      <column length="100" name="NMXACN"/>
+    </property>
+    <property name="nmxmn" type="string">
+      <column length="100" name="NMXMN"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+  </class>
+</hibernate-mapping>

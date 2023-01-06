@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <!--<class dynamic-insert="false" dynamic-update="false" mutable="true"
+             name="com.seeinfobiz.click.entitybean.LkpCrtraView"
+             optimistic-lock="version"
+             polymorphism="implicit"
+             select-before-update="false">-->
+  <class name="com.seeinfobiz.click.entitybean.LkpCrtraView"   table="VW_LKP_CRTRA">
+    <id name="lkpid" type="string">
+      <generator class="guid"/>
+    </id>
+    <property name="customer_id" type="string">
+      <column length="20" name="CUSTOMER_ID"/>
+    </property>
+    <property name="date_of_birth" type="string">
+      <column length="11" name="DATE_OF_BIRTH"/>
+    </property>
+    <property name="customer_name" type="string">
+      <column length="50" name="CUSTOMER_NAME"/>
+    </property>
+    <property name="age" type="long">
+      <column name="AGE"/>
+    </property>
+    <property name="city" type="string">
+      <column length="100" name="CITY"/>
+    </property>
+    <property name="state" type="string">
+      <column length="50" name="STATE"/>
+    </property>
+    <property name="zip" type="string">
+      <column length="50" name="ZIP"/>
+    </property>
+    <property name="opening_balance" type="long">
+      <column name="OPENING_BALANCE"/>
+    </property>
+    <property name="closing_balance" type="long">
+      <column name="CLOSING_BALANCE"/>
+    </property>
+    <property name="account_no" type="long">
+      <column name="ACCOUNT_NO"/>
+    </property>
+    <property name="credit_card_no" type="long">
+      <column name="CREDIT_CARD_NO"/>
+    </property>
+    <property name="process_date" type="string">
+      <column length="11" name="PROCESS_DATE"/>
+    </property>
+    <property name="email_id" type="string">
+      <column length="100" name="EMAIL_ID"/>
+    </property>
+    <property name="alt_email_id" type="string">
+      <column length="100" name="ALT_EMAIL_ID"/>
+    </property>
+    <property name="product" type="long">
+      <column name="PRODUCT_ID"/>
+    </property>
+    <property name="statemetnId" type="long">
+      <column name="STATEMENT_ID"/>
+    </property>
+    <property name="account_type" type="string">
+      <column length="100" name="ACCOUNT_TYPE"/>
+    </property>
+    <!--    <property name="ben_Nm" type="string">
+      <column name="BENIFICARY_NAME"/>
+    </property>
+    <property name="ben_Acc" type="string">
+      <column name="BENIFICARY_ACCOUNT"/>
+    </property>
+    <property name="ben_emlId" type="string">
+      <column name="BENIFICARY_EMAILID"/>
+    </property>
+    <property name="reason" type="string">
+      <column name="REASON"/>
+    </property>
+    <property name="trns_code" type="string">
+      <column name="TRANS_CODE"/>
+    </property>
+    <property name="desc_typ" type="string">
+      <column name="DESCRIPTION_TYPE"/>
+    </property>
+
+    <property name="trns_amt" type="string">
+      <column name="TRANSFER_AMT"/>
+    </property>
+    <property name="trns_date" type="string">
+      <column name="TRANSFER_DATE"/>
+    </property>
+
+   -->
+    <property name="trns_amt" type="string">
+      <column name="trns_amt"/>
+    </property>
+    <property name="desc_typ" type="string">
+      <column name="desc_type"/>
+    </property>
+    <property name="Seleted_Promotional" type="string">
+      <column name="SELECTED_PROMOTIONAL"/>
+    </property>
+  </class>
+</hibernate-mapping>

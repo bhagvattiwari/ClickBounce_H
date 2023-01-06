@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 27, 2011 2:06:44 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Pxrdxdrxshdlrxdtls"   table="PXRDXDRXSHDLRXDTLS">
+    <id name="ixrxdxrpt" type="big_decimal">
+      <column name="IXRXDXRPT" precision="20" scale="0"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="com.seeinfobiz.click.entitybean.Pxrdxdrxm" fetch="select" name="pxrdxdrxm">
+      <column name="IXRXDX" precision="20" scale="0"/>
+    </many-to-one>
+    <property name="nmshdlrxtyp" type="string">
+      <column length="20" name="NMSHDLRXTYP"/>
+    </property>
+    <property name="mnthxschldrx1" type="string">
+      <column length="2" name="MNTHXSCHLDRX1"/>
+    </property>
+    <property name="dxschldrx1" type="string">
+      <column length="2" name="DXSCHLDRX1"/>
+    </property>
+    <property name="mnthxschldrx2" type="string">
+      <column length="2" name="MNTHXSCHLDRX2"/>
+    </property>
+    <property name="dxschldrx2" type="string">
+      <column length="2" name="DXSCHLDRX2"/>
+    </property>
+    <property name="mnthxschldrx3" type="string">
+      <column length="2" name="MNTHXSCHLDRX3"/>
+    </property>
+    <property name="dxschldrx3" type="string">
+      <column length="2" name="DXSCHLDRX3"/>
+    </property>
+    <property name="mnthxschldrx4" type="string">
+      <column length="2" name="MNTHXSCHLDRX4"/>
+    </property>
+    <property name="dxschldrx4" type="string">
+      <column length="2" name="DXSCHLDRX4"/>
+    </property>
+    <property name="dyxwk" type="string">
+      <column length="10" name="DYXWK"/>
+    </property>
+    <property name="tmxschldrxwk" type="string">
+      <column length="20" name="TMXSCHLDRXWK"/>
+    </property>
+    <property name="mdxshdlr" type="string">
+      <column length="20" name="MDXSHDLR"/>
+    </property>
+    <property name="ixtyp" type="big_decimal">
+      <column name="IXTYP" precision="22" scale="0"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 27, 2010 11:57:53 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Pxemlxcng"   table="PXEMLXCNG">
+    <id name="ixcfgxem" type="long">
+      <column name="IXCFGXEM" precision="20" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <many-to-one class="com.seeinfobiz.click.entitybean.Pxprdctxm" fetch="select" lazy="false" name="pxprdctxm">
+      <column name="IXPRDT" precision="20" scale="0"/>
+    </many-to-one>
+    <property name="nmxcngxem" type="string">
+      <column length="100" name="NMXCNGXEM"/>
+    </property>
+    <property name="sbxem" type="string">
+      <column length="50" name="SBXEM"/>
+    </property>
+    <property name="adsxfrmxem" type="string">
+      <column length="50" name="ADSXFRMXEM"/>
+    </property>
+    <property name="ixbncdxem" type="string">
+      <column length="50" name="IXBNCDXEM"/>
+    </property>
+    <property name="ixemxrply" type="string">
+      <column length="50" name="IXEMXRPLY"/>
+    </property>
+    <property name="fxprsnl" type="string">
+      <column length="1" name="FXPRSNL"/>
+    </property>
+    <property name="prsnlxmsgx1" type="string">
+      <column length="1000" name="PRSNLXMSGX1"/>
+    </property>
+    <property name="prsnlxcolx1" type="string">
+      <column length="20" name="PRSNLXCOLX1"/>
+    </property>
+    <property name="prsnlxmsgx2" type="string">
+      <column length="1000" name="PRSNLXMSGX2"/>
+    </property>
+    <property name="prsnlxcolx2" type="string">
+      <column length="20" name="PRSNLXCOLX2"/>
+    </property>
+    <property name="prsnlxmsgx3" type="string">
+      <column length="1000" name="PRSNLXMSGX3"/>
+    </property>
+    <property name="prsnlxcolx3" type="string">
+      <column length="20" name="PRSNLXCOLX3"/>
+    </property>
+    <property name="srcxbdyxem" type="string">
+      <column length="1" name="SRCXBDYXEM"/>
+    </property>
+    <property name="bdyxem" type="string">
+      <column length="4000" name="BDYXEM"/>
+    </property>
+    <property name="fxatchxem" type="long">
+      <column name="FXATCHXEM" precision="20" scale="0"/>
+    </property>
+    <property name="nm1xflxatchxem" type="string">
+      <column length="50" name="NM1XFLXATCHXEM"/>
+    </property>
+    <property name="lc1xflxatchxem" type="string">
+      <column length="100" name="LC1XFLXATCHXEM"/>
+    </property>
+    <property name="nm2xflxatchxem" type="string">
+      <column length="50" name="NM2XFLXATCHXEM"/>
+    </property>
+    <property name="lc2xflxatchxem" type="string">
+      <column length="100" name="LC2XFLXATCHXEM"/>
+    </property>
+    <property name="nm3xflxatchxem" type="string">
+      <column length="50" name="NM3XFLXATCHXEM"/>
+    </property>
+    <property name="lc3xflxatchxem" type="string">
+      <column length="100" name="LC3XFLXATCHXEM"/>
+    </property>
+    <property name="crtraxadnce" type="string">
+      <column length="2" name="CRTRAXADNCE"/>
+    </property>
+    <property name="prmtrxqryxem" type="string">
+      <column length="4000" name="PRMTRXQRYXEM"/>
+    </property>
+    <property name="rmksxem" type="string">
+      <column length="1000" name="RMKSXEM"/>
+    </property>
+    <property name="rmxmkrs" type="string">
+      <column length="1000" name="RMXMKRS"/>
+    </property>
+    <property name="fxsttsxem" type="string">
+      <column length="1" name="FXSTTSXEM"/>
+    </property>
+    <property name="dxctd" type="timestamp">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="timestamp">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <property name="fxflxpathxem" type="string">
+      <column length="200" name="FXFLXPATHXEM"/>
+    </property>
+    <property name="ixdpt" type="long">
+      <column name="IXDPT" precision="22" scale="0"/>
+    </property>
+  </class>
+</hibernate-mapping>

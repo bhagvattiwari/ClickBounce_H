@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 5, 2012 11:22:47 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Usreqa"   table="USREQA">
+    <id name="ixr" type="long">
+      <column name="IXR" precision="22" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <many-to-one class="com.seeinfobiz.click.entitybean.Pxusrxm" fetch="select" name="pxusrxm">
+      <column name="IXU" precision="22" scale="0"/>
+    </many-to-one>
+    <property name="uxactdtl" type="string">
+      <column length="20" name="UXACTDTL"/>
+    </property>
+  </class>
+</hibernate-mapping>

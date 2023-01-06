@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 8, 2012 2:53:11 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Pxhdfcxedt"   table="PXHDFCXEDT">
+    <id name="ixedt" type="long">
+      <column name="IXEDT" precision="22" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <property name="ixprdt" type="long">
+      <column name="IXPRDT" precision="22" scale="0"/>
+    </property>
+    <property name="nmxcls" type="string">
+      <column length="4000" name="NMXCLS"/>
+    </property>
+    <property name="bdxmsg" type="string">
+      <column name="BDXMSG"/>
+    </property>
+    <property name="nmxval" type="string">
+      <column length="4000" name="NMXVAL"/>
+    </property>
+    <property name="numxcls" type="string">
+      <column length="4000" name="NUMXCLS"/>
+    </property>
+    <property name="nmxtyp" type="string">
+      <column length="4000" name="NMXTYP"/>
+    </property>
+    <property name="numxseq" type="string">
+      <column length="4000" name="NUMXSEQ"/>
+    </property>
+    <property name="cdxcls" type="string">
+      <column length="4000" name="CDXCLS"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <!--<class dynamic-insert="false" dynamic-update="false" mutable="true"
+             name="com.seeinfobiz.click.entitybean.LkpCrtraView"
+             optimistic-lock="version"
+             polymorphism="implicit"
+             select-before-update="false">-->
+  <class name="com.seeinfobiz.click.entitybean.LkpSchedularView"   table="VW_SCHEDULAR_VIEW">
+    <id name="scdr_id" type="long">
+      <generator class="guid"/>
+    </id>
+    <property name="scdr_name" type="string">
+      <column length="200" name="SCDR_NAME"/>
+    </property>
+    <property name="scdr_time" type="string">
+      <column length="50" name="SCDR_TIME"/>
+    </property>
+    <property name="scdr_status" type="string">
+      <column length="200" name="SCDR_STATUS"/>
+    </property>
+    <property name="scdr_mode" type="string">
+      <column length="2" name="SCDR_MODE"/>
+    </property>
+    <property name="scdr_type" type="string">
+      <column length="18" name="SCDR_TYPE"/>
+    </property>
+    <property name="scdr_month1" type="string">
+      <column length="3" name="SCDR_MONTH1"/>
+    </property>
+    <property name="scdr_month2" type="string">
+      <column length="3" name="SCDR_MONTH2"/>
+    </property>
+    <property name="scdr_month3" type="string">
+      <column length="3" name="SCDR_MONTH3"/>
+    </property>
+    <property name="scdr_month4" type="string">
+      <column length="4" name="SCDR_MONTH4"/>
+    </property>
+    <property name="scdr_day1" type="string">
+      <column length="40" name="SCDR_DAY1"/>
+    </property>
+    <property name="scdr_day2" type="string">
+      <column length="40" name="SCDR_DAY2"/>
+    </property>
+    <property name="scdr_day3" type="string">
+      <column length="40" name="SCDR_DAY3"/>
+    </property>
+    <property name="scdr_day4" type="string">
+      <column length="40" name="SCDR_DAY4"/>
+    </property>
+    <property name="scdr_weekday" type="string">
+      <column length="40" name="SCDR_WEEKDAY"/>
+    </property>
+    <property name="scdr_daily" type="string">
+      <column length="10" name="SCDR_DAILY"/>
+    </property>
+    <property name="scdr_ruleid" type="long">
+      <column name="SCDR_RULEID"/>
+    </property>
+    <property name="scdr_prodid" type="long">
+      <column name="SCDR_PRODID"/>
+    </property>
+    <property name="scdr_prsmode" type="string">
+      <column length="2" name="SCDR_PRSMODE"/>
+    </property>
+  </class>
+</hibernate-mapping>

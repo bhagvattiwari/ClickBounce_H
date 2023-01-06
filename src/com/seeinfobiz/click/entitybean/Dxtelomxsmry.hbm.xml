@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 27, 2010 11:57:53 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Dxtelomxsmry"   table="DXTELOMXSMRY">
+    <id name="ixsmryxtelom" type="big_decimal">
+      <column name="IXSMRYXTELOM" precision="20" scale="0"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="com.seeinfobiz.click.entitybean.Dxtrnsxsmryxm" fetch="select" name="dxtrnsxsmryxm">
+      <column name="IXSMRYXTRS" precision="20" scale="0"/>
+    </many-to-one>
+    <property name="nmxacnt" type="string">
+      <column length="100" name="NMXACNT"/>
+    </property>
+    <property name="chrsxtmexone" type="string">
+      <column length="50" name="CHRSXTMEXONE"/>
+    </property>
+    <property name="chrgsxmnhly" type="string">
+      <column length="50" name="CHRGSXMNHLY"/>
+    </property>
+    <property name="chrsxus" type="string">
+      <column length="50" name="CHRSXUS"/>
+    </property>
+    <property name="chrgsxms" type="string">
+      <column length="50" name="CHRGSXMS"/>
+    </property>
+    <property name="chrgsxcallxconfrnc" type="string">
+      <column length="50" name="CHRGSXCALLXCONFRNC"/>
+    </property>
+    <property name="chrgsxromng" type="string">
+      <column length="50" name="CHRGSXROMNG"/>
+    </property>
+    <property name="chrsxothxdscnts" type="string">
+      <column length="50" name="CHRSXOTHXDSCNTS"/>
+    </property>
+    <property name="chrsxcrdtxmisc" type="string">
+      <column length="50" name="CHRSXCRDTXMISC"/>
+    </property>
+    <property name="tx" type="string">
+      <column length="50" name="TX"/>
+    </property>
+    <property name="balxprv" type="string">
+      <column length="50" name="BALXPRV"/>
+    </property>
+    <property name="pyt" type="string">
+      <column length="50" name="PYT"/>
+    </property>
+    <property name="adjstxs" type="string">
+      <column length="50" name="ADJSTXS"/>
+    </property>
+    <property name="chrgsxtot" type="string">
+      <column length="50" name="CHRGSXTOT"/>
+    </property>
+    <property name="onxduxamt" type="string">
+      <column length="50" name="ONXDUXAMT"/>
+    </property>
+    <property name="dxduxaftrxduxamt" type="string">
+      <column length="50" name="DXDUXAFTRXDUXAMT"/>
+    </property>
+    <property name="dxdu" type="date">
+      <column length="7" name="DXDU"/>
+    </property>
+    <property name="noxmbl" type="string">
+      <column length="50" name="NOXMBL"/>
+    </property>
+    <property name="plnxtlk" type="string">
+      <column length="50" name="PLNXTLK"/>
+    </property>
+    <property name="lmtxcrdtxdynmc" type="string">
+      <column length="50" name="LMTXCRDTXDYNMC"/>
+    </property>
+    <property name="rtsxplsexlcl" type="string">
+      <column length="50" name="RTSXPLSEXLCL"/>
+    </property>
+    <property name="rtsxclxot" type="string">
+      <column length="50" name="RTSXCLXOT"/>
+    </property>
+    <property name="rtsxsmsxot" type="string">
+      <column length="50" name="RTSXSMSXOT"/>
+    </property>
+    <property name="rtsxlcl" type="string">
+      <column length="50" name="RTSXLCL"/>
+    </property>
+    <property name="rtsxstd" type="string">
+      <column length="50" name="RTSXSTD"/>
+    </property>
+    <property name="rtsxisd" type="string">
+      <column length="50" name="RTSXISD"/>
+    </property>
+    <property name="rtsxsms" type="string">
+      <column length="50" name="RTSXSMS"/>
+    </property>
+    <property name="frncyxblngs" type="string">
+      <column length="50" name="FRNCYXBLNGS"/>
+    </property>
+    <property name="crncyxblngs" type="string">
+      <column length="50" name="CRNCYXBLNGS"/>
+    </property>
+    <property name="noxinvce" type="string">
+      <column length="50" name="NOXINVCE"/>
+    </property>
+    <property name="chrgsxrecrng" type="string">
+      <column length="50" name="CHRGSXRECRNG"/>
+    </property>
+    <property name="dsxc" type="string">
+      <column length="50" name="DSXC"/>
+    </property>
+    <property name="dxinvce" type="date">
+      <column length="7" name="DXINVCE"/>
+    </property>
+    <property name="dsxcxchrg" type="string">
+      <column length="50" name="DSXCXCHRG"/>
+    </property>
+    <property name="dxtrns" type="date">
+      <column length="7" name="DXTRNS"/>
+    </property>
+    <property name="chrxs" type="string">
+      <column length="50" name="CHRXS"/>
+    </property>
+    <property name="rvrsls" type="string">
+      <column length="50" name="RVRSLS"/>
+    </property>
+    <property name="chrgsxnet" type="string">
+      <column length="50" name="CHRGSXNET"/>
+    </property>
+    <property name="qty" type="string">
+      <column length="50" name="QTY"/>
+    </property>
+    <property name="rts" type="string">
+      <column length="50" name="RTS"/>
+    </property>
+    <property name="atxtot" type="string">
+      <column length="50" name="ATXTOT"/>
+    </property>
+    <property name="dxadjxst" type="date">
+      <column length="7" name="DXADJXST"/>
+    </property>
+    <property name="itxm" type="string">
+      <column length="50" name="ITXM"/>
+    </property>
+    <property name="fldx1" type="string">
+      <column length="50" name="FLDX1"/>
+    </property>
+    <property name="fldx2" type="string">
+      <column length="50" name="FLDX2"/>
+    </property>
+    <property name="fldx3" type="string">
+      <column length="50" name="FLDX3"/>
+    </property>
+    <property name="fldx4" type="string">
+      <column length="50" name="FLDX4"/>
+    </property>
+    <property name="fldx5" type="string">
+      <column length="50" name="FLDX5"/>
+    </property>
+    <property name="fldx6" type="string">
+      <column length="50" name="FLDX6"/>
+    </property>
+    <property name="fldx7" type="string">
+      <column length="50" name="FLDX7"/>
+    </property>
+    <property name="fldx8" type="string">
+      <column length="50" name="FLDX8"/>
+    </property>
+    <property name="fldx9" type="string">
+      <column length="50" name="FLDX9"/>
+    </property>
+    <property name="fldx10" type="string">
+      <column length="50" name="FLDX10"/>
+    </property>
+    <property name="fldx11" type="string">
+      <column length="50" name="FLDX11"/>
+    </property>
+    <property name="fldx12" type="string">
+      <column length="50" name="FLDX12"/>
+    </property>
+    <property name="fldx13" type="string">
+      <column length="50" name="FLDX13"/>
+    </property>
+    <property name="fldx14" type="string">
+      <column length="50" name="FLDX14"/>
+    </property>
+    <property name="fldx15" type="string">
+      <column length="50" name="FLDX15"/>
+    </property>
+    <property name="fldx16" type="string">
+      <column length="50" name="FLDX16"/>
+    </property>
+    <property name="fldx17" type="string">
+      <column length="50" name="FLDX17"/>
+    </property>
+    <property name="fldx18" type="string">
+      <column length="50" name="FLDX18"/>
+    </property>
+    <property name="fldx19" type="string">
+      <column length="50" name="FLDX19"/>
+    </property>
+    <property name="fldx20" type="string">
+      <column length="50" name="FLDX20"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <set inverse="true" name="dxtelcomxdtlses">
+      <key>
+        <column name="IXSMRYXTELXM" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Dxtelcomxdtls"/>
+    </set>
+  </class>
+</hibernate-mapping>

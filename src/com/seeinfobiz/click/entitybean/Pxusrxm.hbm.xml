@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 20, 2011 1:57:33 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Pxusrxm"   table="PXUSRXM">
+    <id name="ixu" type="long">
+      <column name="IXU" precision="20" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <many-to-one cascade="all" class="com.seeinfobiz.click.entitybean.Pxdeptxm" fetch="select" lazy="false" name="pxdeptxm">
+      <column name="IXDPT" precision="22" scale="0"/>
+    </many-to-one>
+    <property name="nmxu" type="string">
+      <column length="100" name="NMXU"/>
+    </property>
+    <property name="ixem" type="string">
+      <column length="100" name="IXEM"/>
+    </property>
+    <property name="noxct" type="string">
+      <column length="50" name="NOXCT"/>
+    </property>
+    <property name="woxpa" type="string">
+      <column length="100" name="WOXPA"/>
+    </property>
+    <property name="sttsxu" type="string">
+      <column length="10" name="STTSXU"/>
+    </property>
+    <property name="dxxryxwoxpa" type="date">
+      <column length="7" name="DXXRYXWOXPA"/>
+    </property>
+    <property name="txlaxlo" type="date">
+      <column length="7" name="TXLAXLO"/>
+    </property>
+    <property name="fxlgnxfst" type="long">
+      <column name="FXLGNXFST" precision="20" scale="0"/>
+    </property>
+    <property name="nmxlg" type="string">
+      <column length="50" name="NMXLG"/>
+    </property>
+    <property name="rmxcrnt" type="string">
+      <column length="100" name="RMXCRNT"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <set inverse="true" name="pxusxrlxlnks">
+      <key>
+        <column name="IXU" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxusxrlxlnk"/>
+    </set>
+    <set inverse="true" name="pxusxacts">
+      <key>
+        <column name="IXU" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxusxact"/>
+    </set>
+    <set inverse="true" name="pxusxprdctxlnks">
+      <key>
+        <column name="IXU" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxusxprdctxlnk"/>
+    </set>
+    <set inverse="true" name="pxusxpsdxdtlses">
+      <key>
+        <column name="IXU" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxusxpsdxdtls"/>
+    </set>
+    <set inverse="true" name="pxusrxtmpxrgtxms">
+      <key>
+        <column name="IXU" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxusrxtmpxrgtxm"/>
+    </set>
+    <set inverse="true" name="pxusxregxlnks">
+      <key>
+        <column name="IXU" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxusxregxlnk"/>
+    </set>
+    <set inverse="true" name="pxusxlocxlnks">
+      <key>
+        <column name="IXU" precision="20" scale="0"/>
+      </key>
+      <one-to-many class="com.seeinfobiz.click.entitybean.Pxusxlocxlnk"/>
+    </set>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 27, 2010 11:57:53 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Pxaplxhlthxchp"   table="PXAPLXHLTHXCHP">
+    <id name="ixchkpxhlthxapl" type="big_decimal">
+      <column name="IXCHKPXHLTHXAPL" precision="20" scale="0"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="nmxevt" type="string">
+      <column length="20" name="NMXEVT"/>
+    </property>
+    <property name="typxalt" type="string">
+      <column length="100" name="TYPXALT"/>
+    </property>
+    <property name="crtraxalt" type="string">
+      <column length="50" name="CRTRAXALT"/>
+    </property>
+    <property name="dtlsxss" type="string">
+      <column length="50" name="DTLSXSS"/>
+    </property>
+    <property name="noxmbl" type="string">
+      <column length="50" name="NOXMBL"/>
+    </property>
+    <property name="ixem" type="string">
+      <column length="50" name="IXEM"/>
+    </property>
+    <property name="sbxem" type="string">
+      <column length="50" name="SBXEM"/>
+    </property>
+    <property name="atchxem" type="string">
+      <column length="50" name="ATCHXEM"/>
+    </property>
+    <property name="bdyxem" type="string">
+      <column length="4000" name="BDYXEM"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+  </class>
+</hibernate-mapping>

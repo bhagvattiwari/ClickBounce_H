@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.ebpSchedularView"   table="VW_EBP_SCHEDULAR">
+    <id name="ebp_schedular_id" type="string">
+      <generator class="guid"/>
+    </id>
+    <property name="product_id" type="string">
+      <column length="50" name="PRODUCT_ID"/>
+    </property>
+    <property name="product_name" type="string">
+      <column length="100" name="PRODUCT_NAME"/>
+    </property>
+    <property name="processType" type="string">
+      <column length="50" name="PROCESS_TYPE"/>
+    </property>
+    <property name="status" type="string">
+      <column length="20" name="STATUS"/>
+    </property>
+    <property name="processMode" type="string">
+      <column length="50" name="PROCESS_MODE"/>
+    </property>
+    <property name="process_date" type="string">
+      <column length="11" name="PROCESS_DATE"/>
+    </property>
+    <property name="process_month" type="string">
+      <column length="100" name="PROCESS_MONTH"/>
+    </property>
+    <property name="sch_time" type="string">
+      <column length="100" name="SCH_TIME"/>
+    </property>
+  </class>
+</hibernate-mapping>

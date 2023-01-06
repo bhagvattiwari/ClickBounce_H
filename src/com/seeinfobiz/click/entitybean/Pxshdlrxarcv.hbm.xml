@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 27, 2012 10:53:17 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Pxshdlrxarcv"   table="PXSHDLRXARCV">
+    <id name="ixarcvxshdlr" type="long">
+      <column name="IXARCVXSHDLR" precision="20" scale="0"/>
+      <generator class="increment"/>
+    </id>
+    <many-to-one cascade="all" class="com.seeinfobiz.click.entitybean.Pxshdlrxm" fetch="select" lazy="false" name="pxshdlrxm">
+      <column name="IXMXSHDLR" precision="20" scale="0"/>
+    </many-to-one>
+    <property name="ixrndxshdlr" type="timestamp">
+      <column length="7" name="IXRNDXSHDLR"/>
+    </property>
+    <property name="ixprcs" type="long">
+      <column length="7" name="IXPRCS"/>
+    </property>
+    <property name="ixtmexshdlr" type="string">
+      <column length="10" name="IXTMEXSHDLR"/>
+    </property>
+    <property name="nmxzpxetl" type="string">
+      <column length="200" name="NMXZPXETL"/>
+    </property>
+    <property name="ptxbatxetl" type="string">
+      <column length="500" name="PTXBATXETL"/>
+    </property>
+    <property name="stts" type="string">
+      <column length="2000" name="STTS"/>
+    </property>
+    <property name="nmxschxm" type="string">
+      <column length="50" name="NMXSCHXM"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+    <!-- rajesh added the status of each process -->
+    <property name="fxprcsxprs" type="string">
+      <column length="20" name="FXPRCSXPRS"/>
+    </property>
+    <property name="fxprcsxgen" type="string">
+      <column length="20" name="FXPRCSXGEN"/>
+    </property>
+    <property name="fxprcsxeml" type="string">
+      <column length="20" name="FXPRCSXEML"/>
+    </property>
+    <property name="flgxschxebpxmnl" type="string">
+      <column length="20" name="FLGXSCHXEBPXMNL"/>
+    </property>
+    <property name="flgxrecsv" type="string">
+      <column length="20" name="FLGXRECSV"/>
+    </property>
+    <property name="crnt_stts" type="string">
+      <column length="50" name="CRNT_STTS"/>
+    </property>
+  </class>
+</hibernate-mapping>

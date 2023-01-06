@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 27, 2010 11:57:53 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.seeinfobiz.click.entitybean.Dxtrnsxccxsmry"   table="DXTRNSXCCXSMRY">
+    <id name="ixsmryxcctrns" type="big_decimal">
+      <column name="IXSMRYXCCTRNS" precision="20" scale="0"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="com.seeinfobiz.click.entitybean.Dxtrnsxsmryxm" fetch="select" name="dxtrnsxsmryxm">
+      <column name="IXSMRYXTRNS" precision="20" scale="0"/>
+    </many-to-one>
+    <property name="typxcrd" type="string">
+      <column length="100" name="TYPXCRD"/>
+    </property>
+    <property name="lmtxcrdtxtot" type="big_decimal">
+      <column name="LMTXCRDTXTOT" precision="20" scale="0"/>
+    </property>
+    <property name="lmtxcrdtxavl" type="big_decimal">
+      <column name="LMTXCRDTXAVL" precision="20" scale="0"/>
+    </property>
+    <property name="lmtxcshxtot" type="big_decimal">
+      <column name="LMTXCSHXTOT" precision="20" scale="0"/>
+    </property>
+    <property name="lmtxcshxavl" type="big_decimal">
+      <column name="LMTXCSHXAVL" precision="20" scale="0"/>
+    </property>
+    <property name="dxdxpyt" type="date">
+      <column length="7" name="DXDXPYT"/>
+    </property>
+    <property name="dxpytxmn" type="big_decimal">
+      <column name="DXPYTXMN" precision="20" scale="0"/>
+    </property>
+    <property name="dxpytxttl" type="big_decimal">
+      <column name="DXPYTXTTL" precision="20" scale="0"/>
+    </property>
+    <property name="otstngxttl" type="big_decimal">
+      <column name="OTSTNGXTTL" precision="20" scale="0"/>
+    </property>
+    <property name="dxamtxprvs" type="big_decimal">
+      <column name="DXAMTXPRVS" precision="20" scale="0"/>
+    </property>
+    <property name="mdxpyt" type="big_decimal">
+      <column name="MDXPYT" precision="20" scale="0"/>
+    </property>
+    <property name="chrgsxothrxprchs" type="big_decimal">
+      <column name="CHRGSXOTHRXPRCHS" precision="20" scale="0"/>
+    </property>
+    <property name="blxopxpntxrwd" type="big_decimal">
+      <column name="BLXOPXPNTXRWD" precision="20" scale="0"/>
+    </property>
+    <property name="blxclxpntxrwd" type="big_decimal">
+      <column name="BLXCLXPNTXRWD" precision="20" scale="0"/>
+    </property>
+    <property name="erndxrwd" type="big_decimal">
+      <column name="ERNDXRWD" precision="20" scale="0"/>
+    </property>
+    <property name="rdmdxrwd" type="big_decimal">
+      <column name="RDMDXRWD" precision="20" scale="0"/>
+    </property>
+    <property name="fldx1" type="string">
+      <column length="50" name="FLDX1"/>
+    </property>
+    <property name="fldx2" type="string">
+      <column length="50" name="FLDX2"/>
+    </property>
+    <property name="fldx3" type="string">
+      <column length="50" name="FLDX3"/>
+    </property>
+    <property name="fldx4" type="string">
+      <column length="50" name="FLDX4"/>
+    </property>
+    <property name="fldx5" type="string">
+      <column length="50" name="FLDX5"/>
+    </property>
+    <property name="fldx6" type="string">
+      <column length="50" name="FLDX6"/>
+    </property>
+    <property name="fldx7" type="string">
+      <column length="50" name="FLDX7"/>
+    </property>
+    <property name="fldx8" type="string">
+      <column length="50" name="FLDX8"/>
+    </property>
+    <property name="fldx9" type="string">
+      <column length="50" name="FLDX9"/>
+    </property>
+    <property name="fldx10" type="string">
+      <column length="50" name="FLDX10"/>
+    </property>
+    <property name="fldx11" type="string">
+      <column length="50" name="FLDX11"/>
+    </property>
+    <property name="fldx12" type="string">
+      <column length="50" name="FLDX12"/>
+    </property>
+    <property name="fldx13" type="string">
+      <column length="50" name="FLDX13"/>
+    </property>
+    <property name="fldx14" type="string">
+      <column length="50" name="FLDX14"/>
+    </property>
+    <property name="fldx15" type="string">
+      <column length="50" name="FLDX15"/>
+    </property>
+    <property name="fldx16" type="string">
+      <column length="50" name="FLDX16"/>
+    </property>
+    <property name="fldx17" type="string">
+      <column length="50" name="FLDX17"/>
+    </property>
+    <property name="fldx18" type="string">
+      <column length="50" name="FLDX18"/>
+    </property>
+    <property name="fldx19" type="string">
+      <column length="50" name="FLDX19"/>
+    </property>
+    <property name="fldx20" type="string">
+      <column length="50" name="FLDX20"/>
+    </property>
+    <property name="dxctd" type="date">
+      <column length="7" name="DXCTD"/>
+    </property>
+    <property name="bxctd" type="string">
+      <column length="100" name="BXCTD"/>
+    </property>
+    <property name="dxmfdxlst" type="date">
+      <column length="7" name="DXMFDXLST"/>
+    </property>
+    <property name="bxmfdxlst" type="string">
+      <column length="100" name="BXMFDXLST"/>
+    </property>
+  </class>
+</hibernate-mapping>
