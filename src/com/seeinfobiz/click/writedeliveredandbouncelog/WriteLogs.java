@@ -62,9 +62,9 @@
 /*  62 */     String str2 = "";
 /*     */     try {
 /*  64 */       if (paramString2.toLowerCase().contains("retrigger_bounce")) {
-/*  65 */         str1 = "select noxacnt,logo,nmxfst,RIXEMXBNCD,dtxprcs,SUBSTR(crn,LENGTH(crn)-16,8),cdexreg,cxfile,replace(flxdelevry,'Email,Print', 'Email and Print') as flxdlvry ,rrexo,decode(rcatxbou, 'H', 'Bounced', 'S', 'Bounced', 'D', 'Delivered') as status ,decode(rcatxbou, 'H', 'Hard', 'S', 'Soft', 'D', 'Delivered') as type,to_date(substr(rdtxarrvl,6,11),'dd Mon yyyy') as bounce_date from  pxbncdxtra where trunc(rdxctd)=trunc(sysdate)";
+/*  65 */         str1 = "select noxacnt,logo,nmxfst,RIXEMXBNCD,to_char(dtxprcs, 'DD-Mon-YY') dtxprcs,SUBSTR(crn,LENGTH(crn)-16,8),cdexreg,cxfile,replace(flxdelevry,'Email,Print', 'Email and Print') as flxdlvry ,rrexo,decode(rcatxbou, 'H', 'Bounced', 'S', 'Bounced', 'D', 'Delivered') as status ,decode(rcatxbou, 'H', 'Hard', 'S', 'Soft', 'D', 'Delivered') as type,to_char(to_date(substr(dtxarrvl,6,11),'dd Mon yyyy'), 'DD-Mon-YY') as bounce_date from  pxbncdxtra where trunc(rdxctd)=trunc(sysdate)";
 /*  66 */       } else if (paramString2.toLowerCase().contains("bounce")) {
-/*  67 */         str1 = "select noxacnt,logo,nmxfst,IXEMXBNCD,dtxprcs,SUBSTR(crn,LENGTH(crn)-16,8),cdexreg,cxfile,replace(flxdelevry,'Email,Print', 'Email and Print') as flxdlvry ,rexo,decode(catxbou, 'H', 'Bounced', 'S', 'Bounced', 'D', 'Delivered') as status ,decode(catxbou, 'H', 'Hard', 'S', 'Soft', 'D', 'Delivered') as type,to_date(substr(dtxarrvl,6,11),'dd Mon yyyy') as bounce_date  from  pxbncdxtra where trunc(dxctd)=trunc(sysdate)";
+/*  67 */         str1 = "select noxacnt,logo,nmxfst,IXEMXBNCD,to_char(dtxprcs, 'DD-Mon-YY') dtxprcs,SUBSTR(crn,LENGTH(crn)-16,8),cdexreg,cxfile,replace(flxdelevry,'Email,Print', 'Email and Print') as flxdlvry ,rexo,decode(catxbou, 'H', 'Bounced', 'S', 'Bounced', 'D', 'Delivered') as status ,decode(catxbou, 'H', 'Hard', 'S', 'Soft', 'D', 'Delivered') as type,to_char(to_date(substr(dtxarrvl,6,11),'dd Mon yyyy'), 'DD-Mon-YY') as bounce_date  from  pxbncdxtra where trunc(dxctd)=trunc(sysdate)";
 /*     */       } 
 /*  69 */       if (paramString2.toLowerCase().contains("deliver")) {
 /*  70 */         str1 = "select distinct substr(dprc.crn,1,length(dprc.crn)-18) as Account_Number ,dprc.acntxtyp as Logo,cstmstr.nmxfst as Customer_Name,dprc.ixem as Email, dprc.dxprcs as Email_Date,cstmstrdtl.stxstxdt as Statement_Date,cstmstrdtl.cdexreg as Region, dprc.cxfile as Extract_Name,replace(dprc.FLXCHNLXDLVY,'Email,Print', 'Email and Print') as Delivery_Channel,'Email Delivered Successfully' as Reason,'Delivered' as Status,'N/A' as Bounce_Category from DXPRDTNXDTLSXM dprc,  DXCSTMRXDTLS cstmstrdtl, DXCSTMRXM cstmstr where  dprc.ixprcs = cstmstrdtl.ixprcs and cstmstr.ixprcs = dprc.ixprcs and dprc.ixprcs = '" + paramLong + "' and cstmstrdtl.IXCST = cstmstr.IXCST and dprc.NOXACNT = cstmstrdtl.NOXACNT and dprc.crn = cstmstr.crn and dprc.FLXCHNLXDLVY  =  cstmstrdtl.DLVRYXCHNEL and dprc.FLXCHNLXDLVY  like'%Email%'and NOT EXISTS (select * from PXBNCDXTRA where dprc.crn = PXBNCDXTRA.crn and PXBNCDXTRA.ixprcs ='" + paramLong + "')";
@@ -74,13 +74,15 @@
 /*  74 */         str1 = "select CARD_NO, EMAIL_ID, DELIVERD_DATE, FILE_SRC_NAME, STATEMENT_DATE, STMT_FLAG, PROCESS_ID from VW_READ_RECEIPT_DATA";
 /*     */       } 
 /*  76 */       str2 = (paramString2.toLowerCase().contains("retrigger_bounce") || paramString2.toLowerCase().contains("bounce") || paramString2.toLowerCase().contains("deliver")) ? "Sr. No,Account Number,Logo,Customer Name,Email,Email Date,Statement Date,Region Code,Extract Name,Delivery Channel,Reason,Status,Bounce Type,Bounce Date" : "Sr. No,Card No, Email Id, Email Read Date, File sourcee Name, Statement Date, Stmt Flag, Process Id";
+                System.out.println("str1:"+str1);
 /*  77 */       statement = paramConnection.createStatement();
 /*  78 */       resultSet = statement.executeQuery(str1);
-/*  79 */       byte b = 1;
+/*  79 */       int b = 1;
 /*  80 */       while (resultSet.next()) {
 /*  81 */         String str = "";
 /*  82 */         bufferedWriter = new BufferedWriter(new FileWriter(paramString1 + paramString2 + ".csv", true));
-/*  83 */         str = (paramString2.toLowerCase().contains("retrigger_bounce") || paramString2.toLowerCase().contains("bounce") || paramString2.toLowerCase().contains("deliver")) ? (b + "," + resultSet.getString(1) + "," + resultSet.getString(2) + "," + resultSet.getString(3) + "," + resultSet.getString(4) + "," + getddMMYYYYString(resultSet.getString(5).substring(0, 10)) + "," + getddMMYYYYString(resultSet.getString(6), "MMddyyyy") + "," + resultSet.getString(7) + "," + resultSet.getString(8) + "," + resultSet.getString(9) + "," + resultSet.getString(10) + "," + resultSet.getString(11) + "," + resultSet.getString(12) + "," + getddMMYYYYString(resultSet.getString(13), "yyyy-MM-dd")) : (b + "," + resultSet.getString(1) + "," + resultSet.getString(2) + "," + getddMMYYYYString(resultSet.getString(3).substring(0, 10)) + "," + resultSet.getString(4) + "," + getddmmmyyyyfromddmmyyyy(resultSet.getString(5)) + "," + resultSet.getString(6).replace(",", "-") + "," + resultSet.getString(7));
+///*  83 */         str = (paramString2.toLowerCase().contains("retrigger_bounce") || paramString2.toLowerCase().contains("bounce") || paramString2.toLowerCase().contains("deliver")) ? (b + "," + resultSet.getString(1) + "," + resultSet.getString(2) + "," + resultSet.getString(3) + "," + resultSet.getString(4) + "," + getddMMYYYYString(resultSet.getString(5), "dd-MM-yy") + "," + getddMMYYYYString(resultSet.getString(6), "MMddyyyy") + "," + resultSet.getString(7) + "," + resultSet.getString(8) + "," + resultSet.getString(9) + "," + resultSet.getString(10) + "," + resultSet.getString(11) + "," + resultSet.getString(12) + "," + getddMMYYYYString(resultSet.getString(13), "dd-MM-yy")) : (b + "," + resultSet.getString(1) + "," + resultSet.getString(2) + "," + getddMMYYYYString(resultSet.getString(3).substring(0, 10)) + "," + resultSet.getString(4) + "," + getddmmmyyyyfromddmmyyyy(resultSet.getString(5)) + "," + resultSet.getString(6).replace(",", "-") + "," + resultSet.getString(7));
+                  str = (paramString2.toLowerCase().contains("retrigger_bounce") || paramString2.toLowerCase().contains("bounce") || paramString2.toLowerCase().contains("deliver")) ? (b + "," + resultSet.getString(1) + "," + resultSet.getString(2) + "," + resultSet.getString(3) + "," + resultSet.getString(4) + "," + resultSet.getString(5) + "," + getddMMYYYYString(resultSet.getString(6), "MMddyyyy") + "," + resultSet.getString(7) + "," + resultSet.getString(8) + "," + resultSet.getString(9) + "," + resultSet.getString(10) + "," + resultSet.getString(11) + "," + resultSet.getString(12) + "," + resultSet.getString(13)) : (b + "," + resultSet.getString(1) + "," + resultSet.getString(2) + "," + getddMMYYYYString(resultSet.getString(3).substring(0, 10)) + "," + resultSet.getString(4) + "," + getddmmmyyyyfromddmmyyyy(resultSet.getString(5)) + "," + resultSet.getString(6).replace(",", "-") + "," + resultSet.getString(7));
 /*  84 */         str = str.replace("null", "");
 /*  85 */         if (b == 1) {
 /*  86 */           bufferedWriter.write(str2 + "\n");
@@ -152,6 +154,11 @@
 /*     */     } 
 /* 153 */     return paramString;
 /*     */   }
+            public static void main(String[] args) {
+                System.out.println(new WriteLogs().getddMMYYYYString("09-01-23", "dd-MM-YY"));
+       
+            }
+    
 /*     */ }
 
 

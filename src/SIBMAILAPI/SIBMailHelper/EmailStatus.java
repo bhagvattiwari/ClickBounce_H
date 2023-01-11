@@ -113,11 +113,31 @@
 /* 113 */               this.date = ((readAndDeliveryReceiptInfo.getDate() == null) ? ("" != null) : !readAndDeliveryReceiptInfo.getDate().equals("")) ? readAndDeliveryReceiptInfo.getDate().trim() : readAndDeliveryReceiptInfo.getDate();
 /* 114 */               this.status = ((readAndDeliveryReceiptInfo.getStatus() == null) ? ("" != null) : !readAndDeliveryReceiptInfo.getStatus().equals("")) ? readAndDeliveryReceiptInfo.getStatus().trim() : readAndDeliveryReceiptInfo.getStatus();
 /* 115 */               this.subject = ((readAndDeliveryReceiptInfo.getSubject() == null) ? ("" != null) : !readAndDeliveryReceiptInfo.getSubject().equals("")) ? readAndDeliveryReceiptInfo.getSubject().trim() : readAndDeliveryReceiptInfo.getSubject();
+                        System.out.println("status:"+status);
+                        System.out.println("readAndDeliveryReceiptInfo.getStatementName():"+readAndDeliveryReceiptInfo.getStatementName());
 /* 116 */               str = this.status.replace(".", "");
-/* 117 */               this.reasonId = Integer.parseInt(str.substring(1, 3));
-/* 118 */               this.statementName = ((readAndDeliveryReceiptInfo.getStatementName() == null) ? ("" != null) : !readAndDeliveryReceiptInfo.getStatementName().equals("")) ? readAndDeliveryReceiptInfo.getStatementName().trim() : readAndDeliveryReceiptInfo.getStatementName();
+                        try{
+                            this.reasonId = Integer.parseInt(str.substring(1, 3));
+                        }catch(Exception ex){
+                            this.reasonId=998;
+                        }
+                                                    
+                        if(readAndDeliveryReceiptInfo.getStatementName() != null){
+                            this.statementName = readAndDeliveryReceiptInfo.getStatementName().trim();
+                        }else {
+                            this.statementName = readAndDeliveryReceiptInfo.getStatementName();
+                        }
+                            
+/* 117 */              // this.reasonId = Integer.parseInt(str.substring(1, 3));
+///* 118 */               this.statementName = ((readAndDeliveryReceiptInfo.getStatementName() == null) ? ("" != null) : !readAndDeliveryReceiptInfo.getStatementName().equals("")) ? readAndDeliveryReceiptInfo.getStatementName().trim() : readAndDeliveryReceiptInfo.getStatementName();
 /* 119 */               this.cardNumber = this.statementName;
-/* 120 */               this.procesID = ((readAndDeliveryReceiptInfo.getEmailProcessId() == null) ? ("" != null) : !readAndDeliveryReceiptInfo.getEmailProcessId().equals("")) ? readAndDeliveryReceiptInfo.getEmailProcessId().trim() : readAndDeliveryReceiptInfo.getEmailProcessId();
+                        
+                        if (readAndDeliveryReceiptInfo.getEmailProcessId() != null) {
+                            this.procesID = readAndDeliveryReceiptInfo.getEmailProcessId().trim();
+                        } else {
+                            this.procesID = readAndDeliveryReceiptInfo.getEmailProcessId();
+                        }
+///* 120 */               this.procesID = ((readAndDeliveryReceiptInfo.getEmailProcessId() == null) ? ("" != null) : !readAndDeliveryReceiptInfo.getEmailProcessId().equals("")) ? readAndDeliveryReceiptInfo.getEmailProcessId().trim() : readAndDeliveryReceiptInfo.getEmailProcessId();
 /* 121 */               if (readAndDeliveryReceiptInfo.getProcesstype() == null) {
 /* 122 */                 this.processType = "N";
 /* 123 */               } else if (readAndDeliveryReceiptInfo.getProcesstype().equals("")) {
@@ -125,8 +145,14 @@
 /*     */               } else {
 /* 126 */                 this.processType = readAndDeliveryReceiptInfo.getProcesstype().trim();
 /*     */               } 
+                        
+                        if (readAndDeliveryReceiptInfo.getAction() != null) {
+                            this.action = readAndDeliveryReceiptInfo.getAction().trim();
+                        } else {
+                            this.action = readAndDeliveryReceiptInfo.getAction();
+                        }
 /*     */               
-/* 129 */               this.action = ((readAndDeliveryReceiptInfo.getAction() == null) ? ("" != null) : !readAndDeliveryReceiptInfo.getAction().equals("")) ? readAndDeliveryReceiptInfo.getAction().trim() : readAndDeliveryReceiptInfo.getAction();
+///* 129 */               this.action = ((readAndDeliveryReceiptInfo.getAction() == null) ? ("" != null) : !readAndDeliveryReceiptInfo.getAction().equals("")) ? readAndDeliveryReceiptInfo.getAction().trim() : readAndDeliveryReceiptInfo.getAction();
 /*     */             }
 /* 131 */             catch (Exception exception) {
 /* 132 */               exception.printStackTrace();
@@ -559,7 +585,12 @@
 /* 559 */               pxbncdxtra.setCdexreg(arrayOfString[14]);
 /* 560 */               pxbncdxtra.setIxemxbncd((arrayOfString[1] != null) ? arrayOfString[1].trim() : arrayOfString[1]);
 /* 561 */               pxbncdxtra.setSttsxbncd((arrayOfString[2] != null) ? arrayOfString[2].trim() : arrayOfString[2]);
-/* 562 */               pxbncdxtra.setDtxarrvl((arrayOfString[3] != null) ? arrayOfString[3].trim() : arrayOfString[3]);
+                        if(arrayOfString[3] != null){
+                            pxbncdxtra.setDtxarrvl(arrayOfString[3].replaceAll("Arrival-", "").trim());
+                        }else{
+                            pxbncdxtra.setDtxarrvl(arrayOfString[3]);
+                        }
+/* 562 */             //  pxbncdxtra.setDtxarrvl((arrayOfString[3] != null) ? arrayOfString[3].trim() : arrayOfString[3]);
 /* 563 */               pxbncdxtra.setRexo((arrayOfString[4] != null) ? arrayOfString[4].trim() : arrayOfString[4]);
 /* 564 */               pxbncdxtra.setIxprcs((arrayOfString[5] != null) ? new Long(arrayOfString[5].trim()) : new Long(arrayOfString[5]));
 /* 565 */               String str1 = arrayOfString[9];
